@@ -1,0 +1,114 @@
+fileFormatVersion: 2
+guid: 35705cb5149034b7690b0678b0f1b7bf
+labels:
+- City
+- House
+- Modular
+- Town
+- Voxel
+timeCreated: 1479719548
+licenseType: Store
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: VTP_Crossroad
+    100002: VTP_Crossroad_crosswalk
+    100004: VTP_Found
+    100006: VTP_Road
+    100008: VTP_Road_crosswalk
+    100010: VTP_Road_side_crosswalk
+    100012: //RootNode
+    100014: VTP_Road_side_crosswalk.001
+    400000: VTP_Crossroad
+    400002: VTP_Crossroad_crosswalk
+    400004: VTP_Found
+    400006: VTP_Road
+    400008: VTP_Road_crosswalk
+    400010: VTP_Road_side_crosswalk
+    400012: //RootNode
+    400014: VTP_Road_side_crosswalk.001
+    2300000: VTP_Crossroad
+    2300002: VTP_Crossroad_crosswalk
+    2300004: VTP_Found
+    2300006: VTP_Road
+    2300008: VTP_Road_crosswalk
+    2300010: VTP_Road_side_crosswalk
+    2300012: VTP_Road_side_crosswalk.001
+    3300000: VTP_Crossroad
+    3300002: VTP_Crossroad_crosswalk
+    3300004: VTP_Found
+    3300006: VTP_Road
+    3300008: VTP_Road_crosswalk
+    3300010: VTP_Road_side_crosswalk
+    3300012: VTP_Road_side_crosswalk.001
+    4300000: VTP_Crossroad_crosswalk
+    4300002: VTP_Road
+    4300004: VTP_Road_crosswalk
+    4300006: VTP_Crossroad
+    4300008: VTP_Found
+    4300010: VTP_Road_side_crosswalk
+    4300012: VTP_Road_side_crosswalk.001
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 1
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

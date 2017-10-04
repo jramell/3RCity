@@ -1,0 +1,14 @@
+PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1
+PA1,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,PA1
+PA1,E  ,P2 ,P2 ,E  ,P2 ,P2 ,PA1,E  ,CF ,PA1,E  ,CF ,E  ,PA1
+PA1,E  ,P2 ,P2 ,E  ,P2 ,P2 ,PA1,E  ,CF ,AG ,E  ,PA1,PA1,PA1
+PA1,E  ,CF ,PA1,E  ,CF ,PA1,PA1,E  ,PA1,PA1,E  ,E  ,E  ,E  ,E  ,E  ,E  ,PA1,PA1,PA1,PA1 
+E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,P2 ,P2 ,AG ,AG ,E  ,PM ,PM ,PM ,PA1
+E  ,PA4,PA4,E  ,CF ,PA4,PA4,PA1,PA1,E  ,E  ,PA1,E  ,P2 ,P2 ,AG ,AG ,E  ,PV ,PV ,PM ,PA1
+E  ,PA4,PA4,E  ,CF ,PA4,PA4,PA1,PA1,E  ,E  ,CF ,E  ,P2 ,P2 ,AG ,AG ,E  ,PV ,PV ,PM ,PA1
+E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,CF ,E  ,PA1,E  ,P2 ,P2 ,AG ,AG ,E  ,PM ,PM ,PM ,PA1
+PA1,E  ,CF ,PA1,E  ,CF ,PA1,PA1,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,PA1,PA1,PA1,PA1
+PA1,E  ,P2 ,P2 ,E  ,P2 ,P2 ,PA1,E  ,P1 ,PA1,E  ,PA1,PA1,PA1
+PA1,E  ,P2 ,P2 ,E  ,P2 ,P2 ,PA1,E  ,CF ,PA1,E  ,CF ,E  ,PA1
+PA1,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,E  ,PA1
+PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1,PA1
