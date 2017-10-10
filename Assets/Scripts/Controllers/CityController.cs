@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEditor.AI;
+using UnityEngine.SceneManagement;
 
 /// <summary>
 /// Scene controllers. It knows the city' status and what building currently exists on it.
@@ -15,6 +16,11 @@ public class CityController : MonoBehaviour
     // -----------------------------------------------------------
 
     public TrashTreatmentCenter defaultTrashTreatmentCenter;
+
+    //
+    //Panel de GameOver
+    //
+    public GameObject PanelGameOver;
 
     /// <summary>
     /// The duration in game days of the current match.
@@ -169,6 +175,9 @@ public class CityController : MonoBehaviour
     [Tooltip("Panel that displays Treatment Centers info")]
     public DisplayGarbagePanel centerInfoPanel;
 
+    /// Gameover panel
+    public GameObject gameOverPanel;
+
     /// <summary>
     /// Panel that displays the landfill's info
     /// </summary>
@@ -236,6 +245,7 @@ public class CityController : MonoBehaviour
     /// <summary>
     /// Executed the first frame this object is alive.
     /// </summary>
+    /// 
     private void Start()
     {
         currentDay = 0;
@@ -246,6 +256,10 @@ public class CityController : MonoBehaviour
         GlassCampaignBought = false;
         noticePanel = GameObject.FindGameObjectWithTag("Notice").GetComponent<NoticePanel>();
         noticePanel.gameObject.SetActive(false);
+    }
+    public void ReStart()
+    {
+        SceneManager.LoadScene("demo1");
     }
 
     public void RegisterMoneyChangedListener(IMoneyChangedListener listener) {
@@ -300,7 +314,7 @@ public class CityController : MonoBehaviour
         {
             // TODO: llamar al método de terminar partida
             Paused = true;
-            Debug.Log("Time's up!");
+            gameOverPanel.gameObject.SetActive(true);
         }
 
         // Pay the player if enough days have passed.

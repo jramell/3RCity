@@ -59,7 +59,15 @@ public class TrashTruckAI : MonoBehaviour {
 
     private void TransitionToCollectState()
     {
+        Debug.Log("TrashTruck == " + trashTruck);
+        //Debug.Log("trashTruck.CollectedGabargeType = " + trashTruck.CollectedGabargeType);
+        if (trashTruck == null) {
+            trashTruck = GetComponent<TrashTruck>();
+        }
         trashTruck.TrashCollectTarget = CityController.Current.NextHouseToCollect(trashTruck.CollectedGabargeType);
+        if (navMeshAgent == null) {
+            navMeshAgent = GetComponent<NavMeshAgent>();
+        }
         navMeshAgent.SetDestination(trashTruck.TrashCollectTarget.TrashCan.position);
         currentState = State.GoingToCollect;
     }

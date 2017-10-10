@@ -5,6 +5,11 @@
 /// </summary>
 public abstract class Buildable : MonoBehaviour
 {
+    [Header("Buildable Settings")]
+    [Tooltip("Building's description that appears in menus")]
+    [SerializeField]
+    private string description;
+
     [SerializeField]
     protected int cost;
 
@@ -40,11 +45,6 @@ public abstract class Buildable : MonoBehaviour
     }
 
     /// <summary>
-    /// Short description of the building.
-    /// </summary>
-    public string description = "";
-
-    /// <summary>
     /// Flag that indicates if the Info panel should be displayed when the mouse passes over.
     /// </summary>
     protected bool showInfoPanel = false;
@@ -68,10 +68,7 @@ public abstract class Buildable : MonoBehaviour
                 displayGlass: false, glassAmount: 0, glassCapacityP: 0,
                 displayMetal: false, metalAmount: 0, metalCapacityP: 0,
                 displayPaper: false, paperAmount: 0, paperCapacityP: 0);
-    
         }
-
-        
     }
 
     /// <summary>
@@ -84,7 +81,6 @@ public abstract class Buildable : MonoBehaviour
         /*if (showInfoPanel && infoDisplay != null)
         {
             // Nothing for now
-
         }*/
     }
 

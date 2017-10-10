@@ -54,7 +54,7 @@ MonoBehaviour:
   camapaignType: 2
   cost: 50
   campaignName: Reciclar Metal
-  description: "El m\xE9tal es un tipo de rock pesado que se origin\xF3 a mediados
-    de los a\xF1os 70, teniendo su apogeo en los 80. Cuando se recicla m\xE9tal de
-    forma inadecuada, salen generos como el metalcore."
+  description: "El metal es un tipo de rock pesado que se origin\xF3 a mediados de
+    los a\xF1os 70, teniendo su apogeo en los 80. Cuando se recicla m\xE9tal de forma
+    inadecuada, salen generos como el metalcore."
   logo: {fileID: 21300000, guid: 1f30c5287dd869a41af782eaac65ff3f, type: 3}
