@@ -1,4 +1,4 @@
-﻿using System.Collections.Generic;
+using System.Collections.Generic;
 using System;
 using UnityEngine;
 using UnityEngine.Analytics;
@@ -315,6 +315,10 @@ public class CityController : MonoBehaviour
             // TODO: llamar al método de terminar partida
             Paused = true;
             gameOverPanel.gameObject.SetActive(true);
+<<<<<<< HEAD
+=======
+            Debug.Log("Time's up!");
+>>>>>>> 61fcd9545ac56a4925aaa527f205e0840bdd77b0
         }
 
         // Pay the player if enough days have passed.
