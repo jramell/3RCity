@@ -124,6 +124,12 @@ public class CityController : MonoBehaviour
             if (trashInStreetsChangedListeners == null) {
                 trashInStreetsChangedListeners = new List<ITrashInStreetsChangedListener>();
             }
+            if(value >= MaxTrashInStreets) {
+                Paused = true;
+                pauseBackground.gameObject.SetActive(false);
+                textDerrota.gameObject.SetActive(true);
+               gameOverPanel.gameObject.SetActive(true);
+            }
             foreach(ITrashInStreetsChangedListener listener in trashInStreetsChangedListeners) {
                 listener.onTrashInStreetsChanged();
             }
@@ -175,8 +181,10 @@ public class CityController : MonoBehaviour
     [Tooltip("Panel that displays Treatment Centers info")]
     public DisplayGarbagePanel centerInfoPanel;
 
-    /// Gameover panel
+    /// Gameover panel y Textos 
     public GameObject gameOverPanel;
+    public GameObject textVictoria;
+    public GameObject textDerrota;
 
     /// <summary>
     /// Panel that displays the landfill's info
@@ -314,6 +322,8 @@ public class CityController : MonoBehaviour
         {
             // TODO: llamar al método de terminar partida
             Paused = true;
+            pauseBackground.gameObject.SetActive(false);
+            textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
         }
 
