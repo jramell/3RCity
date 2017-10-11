@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225243728837770}
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 320.94617, y: 172.23657, z: -617.8548}
   m_LocalScale: {x: 10, y: 10, z: 10}
   m_Children:
   - {fileID: 4381783391458214}
@@ -178,8 +178,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4b0384b5c5286499565a86b91f9a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 50
   description: Centro de camiones de basura oridnaria
+  cost: 75
   trashTrucksSpawn: {fileID: 4584324513170772}
   collectedGarbageType: 0
   paperTCBuilt: 0

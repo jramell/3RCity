@@ -35,13 +35,16 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     private List<BuildButton> otherBuildingsButtons;
 
     [SerializeField]
+    private Button closeChooseBuildingPanelButton;
+
+    [SerializeField]
     private Button campaignsButton;
 
     void Start() {
         if (startWithTutorial) {
             currentEvent = TutorialManager.Event.Introduction;
-            Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "Ministro, hay " +
-                " que evitar que la basura se acumule en esta ciudad. ¡Todos cuentan con usted!" +
+            Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "Ministro,  " +
+                " bienvenido. Me llamo Tuto. Yo seré su ayudante durante los siguientes " + CityController.Current.matchLength + " días." +
                 "\n \nComencemos construyendo una estación de recolección de basura ordinaria."
                 );
             Managers.EventManager.OKButton.onClick.AddListener(() => AdvanceTutorial());
@@ -54,6 +57,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
                 currentEvent = TutorialManager.Event.PointingBuildButton;
                 buildButtonArrow.SetActive(true);
                 buildButton.onClick.AddListener(() => AdvanceTutorial());
+                campaignsButton.interactable = false;
                 break;
 
             case TutorialManager.Event.PointingBuildButton:
@@ -92,6 +96,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     }
 
     void DeactivateButtons() {
+        closeChooseBuildingPanelButton.interactable = false;
         buildButton.interactable = false;
         foreach (BuildButton button in otherBuildingsButtons) {
             button.Deactivate();
@@ -100,6 +105,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     }
 
     void ActivateButtons() {
+        closeChooseBuildingPanelButton.interactable = true;
         buildButton.interactable = true;
         foreach (BuildButton button in otherBuildingsButtons) {
             button.Activate();

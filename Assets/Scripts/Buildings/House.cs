@@ -318,8 +318,6 @@ public class House : MonoBehaviour
         {
             paperTrashCan.DepositTrash(amount);
             paperRec = amount;
-
-            ordinaryTrashCan.DepositTrash(amount);
             Vector3 bagPositionPaper = PaperCanObject.transform.position;
             bagPositionPaper.y += 1f;
             bagPositionPaper.x += -0.166f;
@@ -336,8 +334,6 @@ public class House : MonoBehaviour
         {
             glassTrashCan.DepositTrash(amount);
             glassRec = amount;
-
-            ordinaryTrashCan.DepositTrash(amount);
             Vector3 bagPositionGlass = PaperCanObject.transform.position;
             bagPositionGlass.y += 1f;
             bagPositionGlass.x += -0.066f;
@@ -355,8 +351,6 @@ public class House : MonoBehaviour
         {
             metalTrashCan.DepositTrash(amount);
             metalRec = amount;
-
-            ordinaryTrashCan.DepositTrash(amount);
             Vector3 bagPositionMetal = MetalCanObject.transform.position;
             bagPositionMetal.y += 1f;
             bagPositionMetal.x += -0.166f;

@@ -8,9 +8,10 @@ public class ShowDay : MonoBehaviour, IDayAdvancedListener {
     void Start() {
         dayText = GetComponent<Text>();
         CityController.Current.RegisterDayAdvancedListener(this);
+        onDayAdvanced();
     }
 
     public void onDayAdvanced() {
-        dayText.text = CityController.Current.CurrentDay + "d";
+        dayText.text = (CityController.Current.matchLength - CityController.Current.CurrentDay) + "d";
     }
 }

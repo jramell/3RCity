@@ -560,7 +560,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1355684557350194}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 317.96487, y: 171.74458, z: -617.98895}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4680889654250658}
@@ -1354,18 +1354,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 29909fdaf1730fb4db6f48dfd967a414, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ordinaryCanCapacity: 85
-  paperCanCapacity: 30
-  glassCanCapacity: 30
-  metalCanCapacity: 30
-  ordinaryMinimunGeneration: 1
-  ordinaryMaximunGeneration: 2
-  paperMinimunGeneration: 1
-  paperMaximunGeneration: 3
-  glassMinimunGeneration: 1
-  glassMaximunGeneration: 2
-  metalMinimunGeneration: 1
-  metalMaximunGeneration: 2
+  ordinaryCanCapacity: 80
+  paperCanCapacity: 80
+  glassCanCapacity: 80
+  metalCanCapacity: 80
+  ordinaryMinimunGeneration: 2
+  ordinaryMaximunGeneration: 5
+  paperMinimunGeneration: 2
+  paperMaximunGeneration: 6
+  glassMinimunGeneration: 2
+  glassMaximunGeneration: 6
+  metalMinimunGeneration: 2
+  metalMaximunGeneration: 6
   trashCanTrasnform: {fileID: 4552899327488496}
   ordinaryTrashBag: {fileID: 1803370103536778, guid: b5c13a8f28e73434e8f6fba60beff048,
     type: 2}

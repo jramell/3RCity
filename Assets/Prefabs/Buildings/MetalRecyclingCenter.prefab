@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4b0384b5c5286499565a86b91f9a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 40
   description: Centro de reciclaje de metal
+  cost: 75
   trashTrucksSpawn: {fileID: 4584324513170772}
   collectedGarbageType: 3
   paperTCBuilt: 0
@@ -200,6 +200,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   truckStop: {fileID: 4584324513170772}
   maxCapacity: 500
+  revenuePerPiece: 0.3
 --- !u!114 &114779548997721676
 MonoBehaviour:
   m_ObjectHideFlags: 1

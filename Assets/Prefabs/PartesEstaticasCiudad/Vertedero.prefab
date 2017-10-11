@@ -215,7 +215,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1142921746709974}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 32.302086, y: 0.93681526, z: 104.23517}
+  m_LocalPosition: {x: 321.4027, y: 171.87221, z: -618.03296}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4315333835086940}
@@ -654,5 +654,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   truckStop: {fileID: 4487815551419840}
-  typeOfGarbageTreated: 0
-  maxCapacity: 2500
+  maxCapacity: 1800
