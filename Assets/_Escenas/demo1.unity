@@ -9742,6 +9742,11 @@ Prefab:
       propertyPath: warningColor.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114221277103821356, guid: 1872952af081d3845a109b2d68c55fe3,
+        type: 2}
+      propertyPath: dangerColor.a
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
   m_IsPrefabParent: 0
@@ -14803,6 +14808,16 @@ Prefab:
     - target: {fileID: 1005495521773680, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114221277103821356, guid: 1872952af081d3845a109b2d68c55fe3,
+        type: 2}
+      propertyPath: warningColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114221277103821356, guid: 1872952af081d3845a109b2d68c55fe3,
+        type: 2}
+      propertyPath: dangerColor.a
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
