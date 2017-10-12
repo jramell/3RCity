@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   description: Centro de reciclaje de metal
-  cost: 75
+  cost: 100
   trashTrucksSpawn: {fileID: 4584324513170772}
   collectedGarbageType: 3
   paperTCBuilt: 0

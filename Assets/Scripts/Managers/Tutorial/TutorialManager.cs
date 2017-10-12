@@ -98,7 +98,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
                 ActivateButtons();
                 Managers.EventManager.DisplayEventMessage(title: "Introducción", description:
                     "¡Bien! Esos camiones recogerán basura <color=#1ef20e>ordinaria</color> y la tirarán al vertedero. "
-                        + "\n\nConstruir edificios no es barato, pero la alcaldía prometió ayudarnos con $" + CityController.Current.basePayment + " cada semana"
+                        + "\n\nConstruir edificios no es barato, pero la alcaldía prometió ayudarnos con $" + CityController.Current.basePayment + " <color=#ffff00>cada semana</color>"
                         );
                 break;
 
@@ -125,7 +125,8 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
 
     void PlayTrashOverflowIntro() {
         CurrentEvent = TutorialManager.Event.TrashOverflowIntro;
-        Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "La calle se llena de basura cuando hay demasiada en la caneca de una casa o en el vertedero."
+        Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "La calle se llena de basura cuando hay demasiada en la caneca de una casa o en el vertedero." 
+            + "\n\nPor ejemplo:"
             + "\n\n<color=red>            96/80             1920/1800               </color>");
            // + "\n\nSi se llena el vertedero, no tendremos dónde más meter la basura.");
     }
@@ -133,7 +134,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     void PlayBuildTransition() {
         CurrentEvent = TutorialManager.Event.BuildTransition;
         Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "Para recoger basura de las casas, necesitamos estaciones de camiones que vayan por ella."
-            + "\n\nLe mostraré cómo se construye una estación.");
+            + "\n\nDéjeme mostrarle cómo construir una.");
     }
 
     void PlayBuildButtonIntro() {

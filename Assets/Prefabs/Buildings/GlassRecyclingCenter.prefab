@@ -211,4 +211,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   truckStop: {fileID: 4584324513170772}
   maxCapacity: 500
-  revenuePerPiece: 0.2
+  revenuePerPiece: 0.1

@@ -1,8 +1,6 @@
 using System.Collections.Generic;
-using System;
 using UnityEngine;
 using UnityEngine.Analytics;
-using UnityEditor.AI;
 using UnityEngine.SceneManagement;
 
 /// <summary>
@@ -477,16 +475,16 @@ public class CityController : MonoBehaviour
             paperCenter.gameObject.GetComponent<TrashTreatmentCenter>().TreatGarbage();
         }
 
-        foreach (var paperCenter in metalCenters)
+        foreach (var metalCenter in metalCenters)
         {
             // Get the neccesary component and call the Treat garbage method
-            paperCenter.gameObject.GetComponent<TrashTreatmentCenter>().TreatGarbage();
+            metalCenter.gameObject.GetComponent<TrashTreatmentCenter>().TreatGarbage();
         }
 
-        foreach (var paperCenter in glassCenters)
+        foreach (var glassCenter in glassCenters)
         {
             // Get the neccesary component and call the Treat garbage method
-            paperCenter.gameObject.GetComponent<TrashTreatmentCenter>().TreatGarbage();
+            glassCenter.gameObject.GetComponent<TrashTreatmentCenter>().TreatGarbage();
         }
 
     }

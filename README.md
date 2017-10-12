@@ -5,11 +5,11 @@ Construction game about recycling built by students from the University of the A
 
 *Aug 2017 - present*
 
-Sergio Madera
-José Alejandro Riaño
-Juan Pablo Camacho
+Sergio Madera<br>
+José Alejandro Riaño<br>
+Juan Pablo Camacho<br>
 
 *Jan 2017 - May 2017*
 
-Omar Leonardo Piño
-Diego Alejandro Zucchet
+Omar Leonardo Piño<br>
+Diego Alejandro Zucchet<br>
