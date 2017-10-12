@@ -27,7 +27,6 @@ public class EventManager : MonoBehaviour {
         CityController.Current.Paused = true;
         titleText.text = title;
         descriptionText.text = description;
-        okButton.onClick.AddListener( () => HideEvent() );
         eventPanel.SetActive(true);
     }
     

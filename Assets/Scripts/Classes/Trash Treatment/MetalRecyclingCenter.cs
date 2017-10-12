@@ -20,9 +20,6 @@ public class MetalRecyclingCenter : TrashTreatmentCenter {
         //Debug.Log((revenue > 0) ? "metal: " + revenue : "");
         trashDeposit.CurrentAmount = 0;
         CityController.Current.CurrentMoney += (int)revenue;
-
-
     }
-
 }
 

@@ -597,16 +597,16 @@ PlayerSettings:
       daydreamIconForeground: {fileID: 0}
       daydreamIconBackground: {fileID: 0}
   cloudServicesEnabled:
-    Build: 1
-    Collab: 1
+    Build: 0
+    Collab: 0
     ErrorHub: 0
     Hub: 0
     UNet: 1
   facebookSdkVersion: 7.9.1
   apiCompatibilityLevel: 2
-  cloudProjectId: eebffe0c-f9df-4871-bb7f-2684f6abd489
-  projectName: The 3R City
-  organizationId: matato1995
+  cloudProjectId: 9f1ebc81-803f-477e-a3e6-ab20234a4d59
+  projectName: 3RCity
+  organizationId: juantatacoa
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0
   disableOldInputManagerSupport: 0
