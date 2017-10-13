@@ -268,6 +268,10 @@ public class CityController : MonoBehaviour
         SceneManager.LoadScene("demo1");
     }
 
+    public void LoadMainMenu() {
+        SceneManager.LoadScene("MainMenu");
+    }
+
     public void RegisterMoneyChangedListener(IMoneyChangedListener listener) {
         if (moneyChangedListeners == null) {
             moneyChangedListeners = new List<IMoneyChangedListener>();
