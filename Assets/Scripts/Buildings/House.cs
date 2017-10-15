@@ -346,7 +346,6 @@ public class House : MonoBehaviour
 
         // metal 
         amount = Random.Range(metalMinimunGeneration, metalMaximunGeneration);
-        metalTrashCan.DepositTrash(amount);
         if (IsRecyclingMetal)
         {
             metalTrashCan.DepositTrash(amount);

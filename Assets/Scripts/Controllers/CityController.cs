@@ -143,21 +143,18 @@ public class CityController : MonoBehaviour
         set
         {
             // If the paused state does not change.
-            if (paused == value) 
+            if (paused == value)
                 return;
 
             paused = value;
-            TrashTruckAI[] trucks = (TrashTruckAI[]) FindObjectsOfType(typeof(TrashTruckAI));
-            if (paused)
-            {
+            TrashTruckAI[] trucks = (TrashTruckAI[])FindObjectsOfType(typeof(TrashTruckAI));
+            if (paused) {
                 //Debug.Log("Paused");
                 foreach (var truck in trucks) {
-                    truck.Pause();               
+                    truck.Pause();
                 }
                 pauseBackground.SetActive(true);
-            }
-            else
-            {
+            } else {
                 //Debug.Log("Unpaused");
                 foreach (var truck in trucks) {
                     truck.Resume();
