@@ -55,6 +55,7 @@ public class CityController : MonoBehaviour
     /// <summary>
     /// The current day on the game.
     /// </summary>
+    [SerializeField]
     private int currentDay;
 
     /// <summary>
@@ -321,7 +322,7 @@ public class CityController : MonoBehaviour
         {
             // TODO: llamar al método de terminar partida
             Paused = true;
-            pauseBackground.gameObject.SetActive(false);
+            //pauseBackground.gameObject.SetActive(false);
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
         }
