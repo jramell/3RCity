@@ -114,6 +114,7 @@ public class TrashTruckAI : MonoBehaviour {
     private void CollectOrdinaryTrashFrom(House house, int amountToCollect) {
         trashTruck.Garbage.ordinary += amountToCollect;
         house.OrdinaryTrashCan.PickupTrash(amountToCollect);
+        house.UpdateCanFilling(trashTruck.CollectedGabargeType); // updates the trash can's looks.
     }
 
     private void CollectPaperFrom(House house, int amountToCollect) {
