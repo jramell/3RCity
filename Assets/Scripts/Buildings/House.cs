@@ -8,6 +8,27 @@ using UnityEngine.Analytics;
 [RequireComponent(typeof(Collider))]
 public class House : MonoBehaviour
 {
+
+    // ------------------------------------------------------------
+    // Constants
+    // ------------------------------------------------------------
+
+    /// <summary>
+    /// The height where the can content objects should be when the cans are almost empty.
+    /// </summary>
+    private const float CanContentLowPosition = 0.27f;
+
+    /// <summary>
+    /// The height where the can content objects should be when the cans are halfway full.
+    /// </summary>
+    private const float CanContentMidPosition = 0.45f;
+
+    /// <summary>
+    /// The height where the can content objects shouls be when the cans are practically full.
+    /// </summary>
+    private const float CanContentHighPosition = 0.92f;
+
+
     // ------------------------------------------------------------
     // Attributes and properties
     // ------------------------------------------------------------
@@ -32,9 +53,7 @@ public class House : MonoBehaviour
         get { return ordinaryTrashCan; }
         set
         {
-            ordinaryTrashCan = value;
-            // TODO: do something else if neccesary, like updating the model if 
-            // the current amount if higher than the capacity, etc.
+            ordinaryTrashCan = value;                       
         }
     }
 
@@ -59,8 +78,6 @@ public class House : MonoBehaviour
         set
         {
             paperTrashCan = value;
-            // TODO: do something else if neccesary, like updating the model if 
-            // the current amount if higher than the capacity, etc.
         }
     }
 
@@ -86,8 +103,6 @@ public class House : MonoBehaviour
         set
         {
             glassTrashCan = value;
-            // TODO: do something else if neccesary, like updating the model if 
-            // the current amount if higher than the capacity, etc.
         }
     }
 
@@ -112,8 +127,6 @@ public class House : MonoBehaviour
         set
         {
             metalTrashCan = value;
-            // TODO: do something else if neccesary, like updating the model if 
-            // the current amount if higher than the capacity, etc.
         }
     }
 
@@ -169,6 +182,8 @@ public class House : MonoBehaviour
     /// <summary>
     /// The transform of the place where the trucks stop to collect the garbage. 
     /// </summary>
+    [Header("Trash cans extra settings")]
+    [Tooltip("The transform of the place where the trucks stop to collect the garbage.")]
     public Transform trashCanTrasnform;
 
     /// <summary>
@@ -182,7 +197,14 @@ public class House : MonoBehaviour
     /// <summary>
     /// Prefab of the garbage bag model thet is displayed when the House generates garbage.
     /// </summary>
-	public GameObject ordinaryTrashBag;
+    [Tooltip("Prefab of the garbage bag model thet is displayed when the House generates garbage.")]
+    public GameObject ordinaryTrashBag;
+
+    /// <summary>
+    /// 3D model of the content of the can. It gets higher when the amount of garbage increases. 
+    /// </summary>
+    [Tooltip("3D model of the content of the can.")]
+    public GameObject ordinaryCanContent;
 
     /// <summary>
     /// Reference to the ordinary can transform. Is used to know where to place the garbage bags.
@@ -311,6 +333,7 @@ public class House : MonoBehaviour
 		bagPosition.x += -0.166f; 
 		bagPosition.z += -0.7481f;
 		GameObject instance = Instantiate(ordinaryTrashBag, bagPosition, Quaternion.identity, transform);
+        UpdateCanFilling(Garbage.Type.Ordinary);
 
         // Paper  
         amount = Random.Range(paperMinimunGeneration, paperMaximunGeneration);
@@ -456,6 +479,54 @@ public class House : MonoBehaviour
         }
 
         return message;
+    }
+
+    public void UpdateCanFilling(Garbage.Type garbageType)
+    {
+        float fillRate = 0;
+        GameObject canFilling = null;
+
+        switch (garbageType)
+        {
+            case Garbage.Type.Ordinary:
+                fillRate = (float)OrdinaryTrashCan.CurrentAmount / (float)ordinaryCanCapacity;
+                canFilling = ordinaryCanContent;
+                break;
+            case Garbage.Type.Paper:
+                break;
+            case Garbage.Type.Glass:
+                break;
+            case Garbage.Type.Metal:
+                break;
+            default:
+                break;
+        }
+
+
+        float height = 0;
+        canFilling.SetActive(true);
+
+        if (fillRate < 0.1f)
+        {
+            canFilling.SetActive(false);
+        }
+        else if (fillRate >= 0.1f && fillRate < 0.4f)
+        {
+            height = CanContentLowPosition;
+        }
+        else if (fillRate >= 0.4f && fillRate < 0.75f)
+        {
+            height = CanContentMidPosition;
+        }
+        else if ( fillRate >= 0.75f)
+        {
+            height = CanContentHighPosition;
+        }
+
+        Vector3 fillPosition = canFilling.transform.position;
+        fillPosition.y = height;
+        canFilling.transform.position = fillPosition;
+
     }
 
    
