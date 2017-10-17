@@ -5,6 +5,13 @@ using UnityEngine;
 public class Landfill : TrashTreatmentCenter
 {
     // --------------------------------------------------------
+    // Constants
+    // --------------------------------------------------------
+
+    private const float fillingMaxHeigh = -0.44f;
+    private const float fillingMinHeight = -4.55f;
+
+    // --------------------------------------------------------
     // Attributes
     // --------------------------------------------------------
 
@@ -19,6 +26,12 @@ public class Landfill : TrashTreatmentCenter
     private DisplayGarbagePanel infoDisplay;
 
     bool fillAlertDisplayed = false;
+
+    /// <summary>
+    /// 3d model of the filling of the landfill. It gets higher when the amount of garbage increases.
+    /// </summary>
+    [Tooltip("3d model of the filling of the landfill.")]
+    public GameObject filling;
 
 
     // --------------------------------------------------------
@@ -66,10 +79,18 @@ public class Landfill : TrashTreatmentCenter
         infoDisplay.gameObject.SetActive(false);
     }
 
-    public override void ReceiveGarbage(int amountOfGarbage) {
+    public override void ReceiveGarbage(int amountOfGarbage)
+    {
         trashDeposit.DepositTrash(amountOfGarbage);
         float trashPercent = ((float)trashDeposit.CurrentAmount) / ((float)trashDeposit.Capacity);
-        if (!fillAlertDisplayed &&  trashPercent >= 0.6f) {
+
+        float fillingSpace = fillingMaxHeigh - fillingMinHeight;
+        Vector3 fillingPosition = filling.transform.position;
+        fillingPosition.y = (trashPercent > 1) ? fillingMinHeight + fillingSpace * 1 : fillingMinHeight + fillingSpace * trashPercent;
+        filling.transform.position = fillingPosition;
+
+        if (!fillAlertDisplayed &&  trashPercent >= 0.6f)
+        {
             fillAlertDisplayed = true;
             Managers.EventManager.DisplayEventMessage(title: "Alerta vertedero", description: "¡Ministro, el vertedero está a punto de llenarse!"
                 + "\n\nSi se llena por completo, toda la basura que intentemos meter se irá a las calles." 
