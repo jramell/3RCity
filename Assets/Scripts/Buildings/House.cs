@@ -207,6 +207,24 @@ public class House : MonoBehaviour
     public GameObject ordinaryCanContent;
 
     /// <summary>
+    /// 3D model of the content of the can. It gets higher when the amount of garbage increases. 
+    /// </summary>
+    [Tooltip("3D model of the content of the can.")]
+    public GameObject paperCanContent;
+
+    /// <summary>
+    /// 3D model of the content of the can. It gets higher when the amount of garbage increases. 
+    /// </summary>
+    [Tooltip("3D model of the content of the can.")]
+    public GameObject glassCanContent;
+
+    /// <summary>
+    /// 3D model of the content of the can. It gets higher when the amount of garbage increases. 
+    /// </summary>
+    [Tooltip("3D model of the content of the can.")]
+    public GameObject metalCanContent;
+
+    /// <summary>
     /// Reference to the ordinary can transform. Is used to know where to place the garbage bags.
     /// </summary>
 	private Transform ordinaryCanTransform;
@@ -346,7 +364,8 @@ public class House : MonoBehaviour
             bagPositionPaper.x += -0.166f;
             bagPositionPaper.z += -0.551f;
             GameObject instancePaperB = Instantiate(ordinaryTrashBag, bagPositionPaper, Quaternion.identity, transform);
-            // Instantiate paper bag
+            UpdateCanFilling(Garbage.Type.Paper);
+
         } else {
             ordinaryTrashCan.DepositTrash(amount);
         }
@@ -362,7 +381,8 @@ public class House : MonoBehaviour
             bagPositionGlass.x += -0.066f;
             bagPositionGlass.z += 0.475f; 
             GameObject instanceGlassB = Instantiate(ordinaryTrashBag, bagPositionGlass, Quaternion.identity, transform);
-            // Instanciate paper bag
+            UpdateCanFilling(Garbage.Type.Glass);
+
         } else {
             ordinaryTrashCan.DepositTrash(amount);
         }
@@ -378,7 +398,7 @@ public class House : MonoBehaviour
             bagPositionMetal.x += -0.166f;
             bagPositionMetal.z += -0.7481f;
             GameObject instanceMetalB = Instantiate(ordinaryTrashBag, bagPositionMetal, Quaternion.identity, transform);
-            // Instanciate paper bag
+            UpdateCanFilling(Garbage.Type.Metal);
         }
         else {
             ordinaryTrashCan.DepositTrash(amount);
@@ -493,10 +513,16 @@ public class House : MonoBehaviour
                 canFilling = ordinaryCanContent;
                 break;
             case Garbage.Type.Paper:
+                fillRate = (float)PaperTrashCan.CurrentAmount / (float)paperCanCapacity;
+                canFilling = paperCanContent;
                 break;
             case Garbage.Type.Glass:
+                fillRate = (float)GlassTrashCan.CurrentAmount / (float)glassCanCapacity;
+                canFilling = glassCanContent;
                 break;
             case Garbage.Type.Metal:
+                fillRate = (float)MetalTrashCan.CurrentAmount / (float)metalCanCapacity;
+                canFilling = metalCanContent;
                 break;
             default:
                 break;

@@ -120,16 +120,19 @@ public class TrashTruckAI : MonoBehaviour {
     private void CollectPaperFrom(House house, int amountToCollect) {
         trashTruck.Garbage.paper += amountToCollect;
         house.PaperTrashCan.PickupTrash(amountToCollect);
+        house.UpdateCanFilling(trashTruck.CollectedGabargeType); // updates the trash can's looks.
     }
 
     private void CollectGlassFrom(House house, int amountToCollect) {
         trashTruck.Garbage.glass += amountToCollect;
         house.GlassTrashCan.PickupTrash(amountToCollect);
+        house.UpdateCanFilling(trashTruck.CollectedGabargeType); // updates the trash can's looks.
     }
 
     private void CollectMetalFrom(House house, int amountToCollect) {
         trashTruck.Garbage.metal += amountToCollect;
         house.MetalTrashCan.PickupTrash(amountToCollect);
+        house.UpdateCanFilling(trashTruck.CollectedGabargeType); // updates the trash can's looks.
     }
 
     private void DepositTrash()
