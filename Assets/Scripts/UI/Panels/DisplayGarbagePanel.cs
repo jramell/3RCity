@@ -21,11 +21,12 @@ public class DisplayGarbagePanel : MonoBehaviour
     public RectTransform glassPanel;
     public RectTransform metalPanel;
 
+    public Text titleText;
     public Text extraInfoText;
     public Text ordinaryText;
     public Text paperText;
     public Text glassText;
-    public Text metalText;
+    public Text metalText;    
 
     public Color normalColor = Color.white;
     public Color warningColor;
@@ -136,6 +137,75 @@ public class DisplayGarbagePanel : MonoBehaviour
         paperPanel.gameObject.SetActive(displayPaper);
         glassPanel.gameObject.SetActive(displayGlass);
         metalPanel.gameObject.SetActive(displayMetal);
+        gameObject.SetActive(true);
+
+        // Get the height that the panel should have.
+        float panelHeight = 7f;
+        panelHeight += (titlePanel.gameObject.activeInHierarchy) ? titlePanel.sizeDelta.y : 0;
+        panelHeight += (extraInfoPanel.gameObject.activeInHierarchy) ? extraInfoPanel.sizeDelta.y : 0;
+        panelHeight += (ordinaryGarbagePanel.gameObject.activeInHierarchy) ? ordinaryGarbagePanel.sizeDelta.y : 0;
+        panelHeight += (paperPanel.gameObject.activeInHierarchy) ? paperPanel.sizeDelta.y : 0;
+        panelHeight += (glassPanel.gameObject.activeInHierarchy) ? glassPanel.sizeDelta.y : 0;
+        panelHeight += (metalPanel.gameObject.activeInHierarchy) ? metalPanel.sizeDelta.y : 0;
+
+        rectTransform.sizeDelta = new Vector2(0f, panelHeight); // this line resizes the panel.
+        UpdateValues(ordinaryAmount, paperAmount, glassAmount, metalAmount);
+
+    }
+
+    /// <summary>
+    /// Displays the panel. It calculates and sets the Panel's Height based on the active child panels.
+    /// </summary>  
+    public void DisplayPanel(string title, string extraInfo, bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
+    {
+        rectTransform = GetComponent<RectTransform>();
+
+        titleText.text = title;
+        extraInfoText.text = extraInfo;
+        ordinaryCapacity = ordinaryCapacityP;
+        paperCapacity = paperCapacityP;
+        glassCapacity = glassCapacityP;
+        metalCapacity = metalCapacityP;
+
+        ordinaryGarbagePanel.gameObject.SetActive(displayOrdinary);
+        paperPanel.gameObject.SetActive(displayPaper);
+        glassPanel.gameObject.SetActive(displayGlass);
+        metalPanel.gameObject.SetActive(displayMetal);
+        gameObject.SetActive(true);
+
+        // Get the height that the panel should have.
+        float panelHeight = 7f;
+        panelHeight += (titlePanel.gameObject.activeInHierarchy) ? titlePanel.sizeDelta.y : 0;
+        panelHeight += (extraInfoPanel.gameObject.activeInHierarchy) ? extraInfoPanel.sizeDelta.y : 0;
+        panelHeight += (ordinaryGarbagePanel.gameObject.activeInHierarchy) ? ordinaryGarbagePanel.sizeDelta.y : 0;
+        panelHeight += (paperPanel.gameObject.activeInHierarchy) ? paperPanel.sizeDelta.y : 0;
+        panelHeight += (glassPanel.gameObject.activeInHierarchy) ? glassPanel.sizeDelta.y : 0;
+        panelHeight += (metalPanel.gameObject.activeInHierarchy) ? metalPanel.sizeDelta.y : 0;
+
+        rectTransform.sizeDelta = new Vector2(0f, panelHeight); // this line resizes the panel.
+        UpdateValues(ordinaryAmount, paperAmount, glassAmount, metalAmount);
+
+    }
+
+    /// <summary>
+    /// Displays the panel. It calculates and sets the Panel's Height based on the active child panels.
+    /// </summary>  
+    public void DisplayPanel(string title, string extraInfo, bool displayExtraInfo, bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
+    {
+        rectTransform = GetComponent<RectTransform>();
+
+        titleText.text = title;
+        extraInfoText.text = extraInfo;
+        ordinaryCapacity = ordinaryCapacityP;
+        paperCapacity = paperCapacityP;
+        glassCapacity = glassCapacityP;
+        metalCapacity = metalCapacityP;
+
+        ordinaryGarbagePanel.gameObject.SetActive(displayOrdinary);
+        paperPanel.gameObject.SetActive(displayPaper);
+        glassPanel.gameObject.SetActive(displayGlass);
+        metalPanel.gameObject.SetActive(displayMetal);
+        extraInfoPanel.gameObject.SetActive(displayExtraInfo);
         gameObject.SetActive(true);
 
         // Get the height that the panel should have.

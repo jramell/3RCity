@@ -130,4 +130,43 @@ public class TrashTruckStation : Buildable {
     {
         get { return trashTrucksSpawn.position; }
     }
+    /// <summary>
+    /// Executed when the mouse enters the collider.
+    /// Activates the Panel that displays the house's data.
+    /// </summary>
+    protected override void OnMouseEnter()
+    {
+        if (showInfoPanel && infoDisplay != null)
+        {
+            string panelTitle = "";
+            bool displayWarning = true;
+            switch (CollectedGarbageType)
+            {
+                case Garbage.Type.Ordinary:
+                    panelTitle = "Estación de basura ordinaria";
+                    displayWarning = false;
+                    break;
+                case Garbage.Type.Paper:
+                    panelTitle = "Centro de reciclaje de papel";
+                    displayWarning = !CityController.Current.PaperCampaignBought;
+                    break;
+                case Garbage.Type.Glass:
+                    panelTitle = "Centro de reciclaje de vidrio";
+                    displayWarning = !CityController.Current.GlassCampaignBought;
+                    break;
+                case Garbage.Type.Metal:
+                    panelTitle = "Centro de reciclaje de metal";
+                    displayWarning = !CityController.Current.MetalCampaignBought;
+                    break;
+                default:
+                    break;
+            }
+
+            infoDisplay.DisplayPanel(panelTitle, description, displayExtraInfo: displayWarning,
+                displayOrdinary: false, ordinaryAmount: 0, ordinaryCapacityP: 0,
+                displayGlass: false, glassAmount: 0, glassCapacityP: 0,
+                displayMetal: false, metalAmount: 0, metalCapacityP: 0,
+                displayPaper: false, paperAmount: 0, paperCapacityP: 0);
+        }
+    }
 }

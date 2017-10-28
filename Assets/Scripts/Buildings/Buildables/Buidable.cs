@@ -8,7 +8,7 @@ public abstract class Buildable : MonoBehaviour
     [Header("Buildable Settings")]
     [Tooltip("Building's description that appears in menus")]
     [SerializeField]
-    private string description;
+    protected string description;
 
     [SerializeField]
     protected int cost;
