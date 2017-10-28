@@ -20716,16 +20716,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5091b84cf79dc8b40a67be4d9bbc7e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startWithTutorial: 0
+  startWithTutorial: 1
   streetTrashInfoArrow: {fileID: 97450042}
   buildButtonArrow: {fileID: 72273019}
   ordinaryStationArrow: {fileID: 786342270}
   buildButton: {fileID: 769435941}
-  ordinaryStationButton: {fileID: 945788087}
+  ordinaryStationButton: {fileID: 1057439585}
   otherBuildingsButtons:
-  - {fileID: 117088753}
-  - {fileID: 412154664}
-  - {fileID: 605740022}
+  - {fileID: 475087364}
+  - {fileID: 1228954017}
+  - {fileID: 623509155}
   closeChooseBuildingPanelButton: {fileID: 2063590808}
   campaignsButton: {fileID: 1861100930}
 --- !u!1001 &1737600975
