@@ -8204,7 +8204,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1979622710}
+      - m_Target: {fileID: 359132109}
         m_MethodName: SetActive
         m_Mode: 6
         m_Arguments:
@@ -18443,6 +18443,11 @@ Prefab:
       propertyPath: m_PreserveAspect
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114896358527807820, guid: 1a4cf5cf1a922894b9c4dc535b785e43,
+        type: 2}
+      propertyPath: m_Text
+      value: +$0.3/metal reciclado
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a4cf5cf1a922894b9c4dc535b785e43, type: 2}
   m_IsPrefabParent: 0
@@ -20662,6 +20667,11 @@ Prefab:
         type: 2}
       propertyPath: m_PreserveAspect
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896358527807820, guid: 1a4cf5cf1a922894b9c4dc535b785e43,
+        type: 2}
+      propertyPath: m_Text
+      value: +$0.1/papel reciclado
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a4cf5cf1a922894b9c4dc535b785e43, type: 2}
@@ -23978,6 +23988,11 @@ Prefab:
         type: 2}
       propertyPath: m_Text
       value: "Necesita la campa\xF1a de vidrio para funcionar"
+      objectReference: {fileID: 0}
+    - target: {fileID: 114896358527807820, guid: 1a4cf5cf1a922894b9c4dc535b785e43,
+        type: 2}
+      propertyPath: m_Text
+      value: +$0.1/vidrio reciclado
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1a4cf5cf1a922894b9c4dc535b785e43, type: 2}
