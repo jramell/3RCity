@@ -20,6 +20,8 @@ public class CityController : MonoBehaviour
     //
     public GameObject PanelGameOver;
 
+    bool matchOver = false;
+
     /// <summary>
     /// The duration in game days of the current match.
     /// </summary>
@@ -127,7 +129,8 @@ public class CityController : MonoBehaviour
                 Paused = true;
                 pauseBackground.gameObject.SetActive(false);
                 textDerrota.gameObject.SetActive(true);
-               gameOverPanel.gameObject.SetActive(true);
+                gameOverPanel.gameObject.SetActive(true);
+                matchOver = true;
             }
             foreach(ITrashInStreetsChangedListener listener in trashInStreetsChangedListeners) {
                 listener.onTrashInStreetsChanged();
@@ -318,11 +321,10 @@ public class CityController : MonoBehaviour
             house.GenerateGarbage();
         }
 
-        if(currentDay >= matchLength)
+        if(currentDay >= matchLength && !matchOver)
         {
             // TODO: llamar al método de terminar partida
             Paused = true;
-            //pauseBackground.gameObject.SetActive(false);
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
         }

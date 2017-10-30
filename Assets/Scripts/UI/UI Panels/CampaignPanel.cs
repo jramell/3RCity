@@ -29,6 +29,7 @@ public class CampaignPanel : MonoBehaviour, IMoneyChangedListener
         campaignTitle.text = campaign.campaignName;
         campaignImage.sprite = campaign.logo;
         campaignCost.text = "$" + campaign.cost;
+        onMoneyChanged();
     }
 
     public void BuyCampaign()
