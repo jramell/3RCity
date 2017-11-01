@@ -180,10 +180,13 @@ public class CityController : MonoBehaviour
     [Tooltip("Panel that displays Treatment Centers info")]
     public DisplayGarbagePanel centerInfoPanel;
 
-    /// Gameover panel y Textos 
+    /// Gameover panel, textos y estrellas
     public GameObject gameOverPanel;
     public GameObject textVictoria;
     public GameObject textDerrota;
+    public GameObject OneStar;
+    public GameObject TwoStar;
+    public GameObject ThreeStar;
 
     /// <summary>
     /// Panel that displays the landfill's info
@@ -327,6 +330,18 @@ public class CityController : MonoBehaviour
             Paused = true;
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
+            if (TrashInStreets <= (MaxTrashInStreets*0.333))
+            {
+                ThreeStar.gameObject.SetActive(true);
+            }
+            else if (TrashInStreets > (MaxTrashInStreets * 0.333) && TrashInStreets <= (MaxTrashInStreets * 0.666))
+            {
+                TwoStar.gameObject.SetActive(true);
+            }
+            else
+            {
+                OneStar.gameObject.SetActive(true);
+            }
         }
 
         // Pay the player if enough days have passed.
