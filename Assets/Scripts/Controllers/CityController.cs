@@ -247,7 +247,6 @@ public class CityController : MonoBehaviour
 
     private NoticePanel noticePanel;
 
-
     // -----------------------------------------------------------
     // Methods
     // -----------------------------------------------------------
@@ -255,7 +254,6 @@ public class CityController : MonoBehaviour
     /// <summary>
     /// Executed the first frame this object is alive.
     /// </summary>
-    /// 
     private void Start()
     {
         currentDay = 0;
@@ -359,6 +357,19 @@ public class CityController : MonoBehaviour
             { "metalCamp", MetalCampaignBought },
             { "glassCamp", GlassCampaignBought }
         });
+    }
+
+    public bool BoughtCampaign(Campaigns.Type campaignType) {
+        if (campaignType == Campaigns.Type.Glass) {
+            return GlassCampaignBought;
+        }
+        if (campaignType == Campaigns.Type.Metal) {
+            return MetalCampaignBought;
+        }
+        if (campaignType == Campaigns.Type.Paper) {
+            return PaperCampaignBought;
+        }
+        return false;
     }
 
 	void Update ()

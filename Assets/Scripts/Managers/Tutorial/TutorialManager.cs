@@ -153,7 +153,7 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
         ordinaryStationButton.onClick.AddListener(() => AdvanceTutorial());
     }
 
-    public void onBuildingPlaced() {
+    public void onBuildingPlaced(Buildings.Type type) {
         AdvanceTutorial();
     }
 

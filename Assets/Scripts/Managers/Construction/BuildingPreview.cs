@@ -56,7 +56,7 @@ public class BuildingPreview : MonoBehaviour {
         {
             if (isPreviewPlaceable)
             {
-                Managers.BuildingPlacementManager.Place(previewingBuildable);
+                Managers.BuildingPlacementManager.Place(previewingBuildable, previewingBuildingType);
                 StopPreview();
             }
             else

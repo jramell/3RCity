@@ -27,11 +27,11 @@ public class BuildingPlacement : MonoBehaviour {
         buildingPlacedListeners.Remove(listener);
     }
 
-    public void Place(Buildable buildable) {
+    public void Place(Buildable buildable, Buildings.Type buildingType) {
         buildable.Place();
         if (buildingPlacedListeners != null) {
             foreach (IBuildingPlacedListener listener in buildingPlacedListeners) {
-                listener.onBuildingPlaced();
+                listener.onBuildingPlaced(buildingType);
             }
         }
         CityController.Current.CurrentMoney -= buildable.Cost;

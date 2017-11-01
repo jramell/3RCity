@@ -15,5 +15,9 @@ public interface IDayAdvancedListener {
 }
 
 public interface IBuildingPlacedListener {
-    void onBuildingPlaced();
+    void onBuildingPlaced(Buildings.Type buildingType);
+}
+
+public interface ICampaignBoughtListener {
+    void onCampaignBought();
 }
