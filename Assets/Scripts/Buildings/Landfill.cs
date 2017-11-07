@@ -33,6 +33,24 @@ public class Landfill : TrashTreatmentCenter
     [Tooltip("3d model of the filling of the landfill.")]
     public GameObject filling;
 
+    /// <summary>
+    /// 3d model of the street trash. It appears when the landfill is full.
+    /// </summary>
+    [Tooltip("3d model of the filling of the landfill.")]
+    public GameObject streetTrashLow;
+
+    /// <summary>
+    /// 3d model of the street trash. It appears when the landfill is full.
+    /// </summary>
+    [Tooltip("3d model of the filling of the landfill.")]
+    public GameObject streetTrashMidd;
+
+    /// <summary>
+    /// 3d model of the street trash. It appears when the landfill is full.
+    /// </summary>
+    [Tooltip("3d model of the filling of the landfill.")]
+    public GameObject streetTrashHigh;
+
 
     // --------------------------------------------------------
     // Methods
@@ -88,6 +106,9 @@ public class Landfill : TrashTreatmentCenter
         Vector3 fillingPosition = filling.transform.position;
         fillingPosition.y = (trashPercent > 1) ? fillingMinHeight + fillingSpace * 1 : fillingMinHeight + fillingSpace * trashPercent;
         filling.transform.position = fillingPosition;
+        streetTrashLow.gameObject.SetActive(trashPercent >= 1);
+        streetTrashMidd.gameObject.SetActive(trashPercent >= 1.05);
+        streetTrashHigh.gameObject.SetActive(trashPercent >= 1.075);
 
         if (!fillAlertDisplayed &&  trashPercent >= 0.6f)
         {
