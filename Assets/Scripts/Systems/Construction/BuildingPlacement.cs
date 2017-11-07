@@ -60,9 +60,6 @@ public class BuildingPlacement : MonoBehaviour {
     {
         List<string> answer = new List<string>(2);
         answer.Add("PisoTipo3"); //so far, all buildings can be built in PisoTipo3
-        //if (buildingType == Buildings.Type.TrashTruckStation)
-        //{
-        //}
         return answer;
     }
 }

@@ -1,0 +1,17 @@
+{
+  "items": 
+  [
+    {
+     "key":"start_button",
+     "value":"Jugar"
+    },
+    {
+      "key":"credits",
+      "value":"Créditos"
+    },
+    {
+      "key":"back",
+      "value":"Atrás"
+    }
+  ]
+}
