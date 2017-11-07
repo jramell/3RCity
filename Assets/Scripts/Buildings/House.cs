@@ -225,9 +225,39 @@ public class House : MonoBehaviour
     public GameObject metalCanContent;
 
     /// <summary>
+    /// 3D model of the ordinary garbage that appears when the can is overflowed.
+    /// This is displayed when there's little thrash on the streets.
+    /// </summary>
+    [Tooltip("3D model of the ordinary garbage that appears when the can is overflowed")]
+    public GameObject ordinaryStreetTrashLow;
+
+    /// <summary>
+    /// 3D model of the paper garbage that appears when the can is overflowed.
+    /// This is displayed when there's little thrash on the streets.
+    /// </summary>
+    [Tooltip("3D model of the paper garbage that appears when the can is overflowed")]
+    public GameObject paperStreetTrashLow;
+
+    /// <summary>
+    /// 3D model of the glass garbagethat appears when the can is overflowed.
+    /// This is displayed when there's little thrash on the streets.
+    /// </summary>
+    [Tooltip("3D model of the glass garbage that appears when the can is overflowed")]
+    public GameObject glassStreetTrashLow;
+
+    /// <summary>
+    /// 3D model of the metal garbage that appears when the can is overflowed.
+    /// This is displayed when there's little thrash on the streets.
+    /// </summary>
+    [Tooltip("3D model of the metal garbage that appears when the can is overflowed")]
+    public GameObject metalStreetTrashLow;
+
+
+
+    /// <summary>
     /// Reference to the ordinary can transform. Is used to know where to place the garbage bags.
     /// </summary>
-	private Transform ordinaryCanTransform;
+    private Transform ordinaryCanTransform;
 
     /// <summary>
     /// True if the house is recycling paper
@@ -308,6 +338,7 @@ public class House : MonoBehaviour
     /// </summary>
     private GameObject MetalCanObject;
 
+ 
     // ------------------------------------------------------------
     // Methods
     // ------------------------------------------------------------
@@ -505,24 +536,29 @@ public class House : MonoBehaviour
     {
         float fillRate = 0;
         GameObject canFilling = null;
+        GameObject streetThrash = null;
 
         switch (garbageType)
         {
             case Garbage.Type.Ordinary:
                 fillRate = (float)OrdinaryTrashCan.CurrentAmount / (float)ordinaryCanCapacity;
                 canFilling = ordinaryCanContent;
+                streetThrash = ordinaryStreetTrashLow;
                 break;
             case Garbage.Type.Paper:
                 fillRate = (float)PaperTrashCan.CurrentAmount / (float)paperCanCapacity;
                 canFilling = paperCanContent;
+                streetThrash = paperStreetTrashLow;
                 break;
             case Garbage.Type.Glass:
                 fillRate = (float)GlassTrashCan.CurrentAmount / (float)glassCanCapacity;
                 canFilling = glassCanContent;
+                streetThrash = glassStreetTrashLow;
                 break;
             case Garbage.Type.Metal:
                 fillRate = (float)MetalTrashCan.CurrentAmount / (float)metalCanCapacity;
                 canFilling = metalCanContent;
+                streetThrash = metalStreetTrashLow;
                 break;
             default:
                 break;
@@ -547,6 +583,15 @@ public class House : MonoBehaviour
         else if ( fillRate >= 0.75f)
         {
             height = CanContentHighPosition;
+        }
+
+        if (fillRate > 1)
+        {
+            streetThrash.gameObject.SetActive(true);
+        }
+        else
+        {
+            streetThrash.gameObject.SetActive(false);
         }
 
         Vector3 fillPosition = canFilling.transform.position;
