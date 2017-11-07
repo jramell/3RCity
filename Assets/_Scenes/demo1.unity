@@ -16398,6 +16398,7 @@ GameObject:
   - component: {fileID: 1321369710}
   - component: {fileID: 1321369712}
   - component: {fileID: 1321369711}
+  - component: {fileID: 1321369713}
   m_Layer: 5
   m_Name: PanelGameOver
   m_TagString: Untagged
@@ -16413,7 +16414,7 @@ RectTransform:
   m_GameObject: {fileID: 1321369709}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 1}
   m_Children:
   - {fileID: 790318707}
   - {fileID: 291884063}
@@ -16463,6 +16464,23 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1321369709}
+--- !u!95 &1321369713
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1321369709}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4c214fb5f73e9514a95afd92eb2abd20, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!1 &1322352263 stripped
 GameObject:
   m_PrefabParentObject: {fileID: 1735107141100664, guid: 1a4cf5cf1a922894b9c4dc535b785e43,
