@@ -129,6 +129,10 @@ public class CityController : MonoBehaviour
                 Paused = true;
                 pauseBackground.gameObject.SetActive(false);
                 textDerrota.gameObject.SetActive(true);
+                Analytics.CustomEvent("Days before Game Over", new Dictionary<string, object>
+                {
+                    {"Days", CurrentDay }
+                });
                 gameOverPanel.gameObject.SetActive(true);
                 matchOver = true;
             }
@@ -328,6 +332,10 @@ public class CityController : MonoBehaviour
             Paused = true;
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
+            Analytics.CustomEvent("Trash level after winning", new Dictionary<string, object>
+            {
+                {"AmountTrash", TrashInStreets }
+            });
             if (TrashInStreets <= (MaxTrashInStreets*0.333))
             {
                 ThreeStar.gameObject.SetActive(true);
@@ -361,12 +369,24 @@ public class CityController : MonoBehaviour
 
     public bool BoughtCampaign(Campaigns.Type campaignType) {
         if (campaignType == Campaigns.Type.Glass) {
+            Analytics.CustomEvent("timeToGlassCampaing", new Dictionary<string, object>
+        {
+            { "daysGlassCampaing", CurrentDay }
+        });
             return GlassCampaignBought;
         }
         if (campaignType == Campaigns.Type.Metal) {
+        Analytics.CustomEvent("timeToMetalCampaing", new Dictionary<string, object>
+        {
+            { "daysMetalCampaing", CurrentDay }
+        });
             return MetalCampaignBought;
         }
         if (campaignType == Campaigns.Type.Paper) {
+        Analytics.CustomEvent("timeToPaperCampaing", new Dictionary<string, object>
+        {
+            { "daysPaperCampaing", CurrentDay }
+        });
             return PaperCampaignBought;
         }
         return false;
