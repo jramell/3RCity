@@ -30,7 +30,7 @@ public class CampaignPanel : MonoBehaviour, IMoneyChangedListener
             campaignBoughtListeners = new List<ICampaignBoughtListener>();
         }
         buyButton = GetComponentInChildren<Button>();
-        campaignTitle.text = campaign.campaignName;
+        campaignTitle.text = LocalizationManager.instance.GetLocalizedValue(campaign.campaignNameKey);
         campaignImage.sprite = campaign.logo;
         campaignCost.text = "$" + campaign.cost;
         onMoneyChanged();

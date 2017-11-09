@@ -204,6 +204,26 @@
 		{
 			"key":"house_panel_and",
 			"value":"y"
-		}						
+		},
+		{
+			"key":"landfill_panel_title",
+			"value":"Vertedero"
+		},
+		{
+			"key":"campaigns_panel_title",
+			"value":"Compra campañas de reciclaje"
+		},
+		{
+			"key":"campaigns_panel_paper",
+			"value":"Reciclar papel"
+		},
+		{
+			"key":"campaigns_panel_metal",
+			"value":"Reciclar metal"
+		},
+		{
+			"key":"campaigns_panel_glass",
+			"value":"Reciclar vidrio"
+		}			
   ]
 }

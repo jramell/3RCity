@@ -36,10 +36,10 @@ public class Campaign : MonoBehaviour
     public int cost;
 
     /// <summary>
-    /// Name that's going to be displayed on the UI.
+    /// Localization Manager key for the name that's going to be displayed on the UI.
     /// </summary>
-    [Tooltip("Name that's going to be displayed on the UI.")]
-    public string campaignName;
+    [Tooltip("Localization Manager key for the name that's going to be displayed on the UI.")]
+    public string campaignNameKey;
 
     /// <summary>
     /// Short text that's going to be displayed on the UI.

@@ -208,6 +208,22 @@
 		{
 			"key":"landfill_panel_title",
 			"value":"Landfill"
-		}			
+		},
+		{
+			"key":"campaigns_panel_title",
+			"value":"Buy recycling campagins"
+		},
+		{
+			"key":"campaigns_panel_paper",
+			"value":"Recycle paper"
+		},
+		{
+			"key":"campaigns_panel_metal",
+			"value":"Recycle metal"
+		},
+		{
+			"key":"campaigns_panel_glass",
+			"value":"Recycle glass"
+		}		
     ]
 }
