@@ -28,7 +28,19 @@
         {
             "key":"build_panel_title",
             "value":"Select a building"
-        }, 
+        },
+		{
+			"key":"paper",
+			"value":"paper"
+		},
+		{
+			"key":"metal",
+			"value":"metal"
+		},
+		{
+			"key":"glass",
+			"value":"glass"
+		},
         {
             "key":"ordinary_center_title",
             "value":"Ordinary garbage station"
@@ -152,6 +164,46 @@
 		{
 			"key":"city_hall_payment_notice",
             "value":"The city hall has paid you $"
-		}
+		},
+		{
+			"key":"house_panel_title",
+            "value":"House"
+		},
+		{
+			"key":"house_panel_ordinary_trash",
+			"value":"Ordinary trash:"
+		},
+		{
+			"key":"house_panel_paper_trash",
+			"value":"Paper:"
+		},
+		{
+			"key":"house_panel_metal_trash",
+			"value":"Metal:"
+		},
+		{
+			"key":"house_panel_glass_trash",
+			"value":"Glass:"
+		},
+		{
+			"key":"house_panel_does_not_recycle",
+			"value":"Does not recycle."
+		},
+		{
+			"key":"house_panel_recycles_all",
+			"value":"Recycles all kind of garbage."
+		},
+		{
+			"key":"house_panel_recycles_1",
+			"value":"Recycles only "
+		},
+		{
+			"key":"house_panel_recycles_2",
+			"value":"Recycles "
+		},
+		{
+			"key":"house_panel_and",
+			"value":"and"
+		}					
     ]
 }

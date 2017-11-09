@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 224226265869308810}
   - component: {fileID: 222394617845504746}
   - component: {fileID: 114083254147981026}
+  - component: {fileID: 114349640132012470}
   m_Layer: 5
   m_Name: LabelText
   m_TagString: Untagged
@@ -91,6 +92,7 @@ GameObject:
   - component: {fileID: 224911841621492892}
   - component: {fileID: 222772737441386972}
   - component: {fileID: 114787427568846528}
+  - component: {fileID: 114927810263810438}
   m_Layer: 5
   m_Name: LabelText
   m_TagString: Untagged
@@ -193,6 +195,7 @@ GameObject:
   - component: {fileID: 224497415192583932}
   - component: {fileID: 222757172121950084}
   - component: {fileID: 114567563356878322}
+  - component: {fileID: 114421633246778272}
   m_Layer: 5
   m_Name: Text
   m_TagString: Untagged
@@ -210,6 +213,7 @@ GameObject:
   - component: {fileID: 224359910240111084}
   - component: {fileID: 222449333023290528}
   - component: {fileID: 114150295412660036}
+  - component: {fileID: 114654071895527120}
   m_Layer: 5
   m_Name: LabelText
   m_TagString: Untagged
@@ -233,7 +237,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1902709508435336
 GameObject:
   m_ObjectHideFlags: 1
@@ -267,7 +271,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1935551337661300
 GameObject:
   m_ObjectHideFlags: 0
@@ -295,6 +299,7 @@ GameObject:
   - component: {fileID: 224650996562193978}
   - component: {fileID: 222593267860117010}
   - component: {fileID: 114640963484375756}
+  - component: {fileID: 114990459365977254}
   m_Layer: 5
   m_Name: LabelText
   m_TagString: Untagged
@@ -563,6 +568,30 @@ MonoBehaviour:
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 1
   m_ChildControlHeight: 0
+--- !u!114 &114349640132012470
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1091142176917146}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_ordinary_trash
+--- !u!114 &114421633246778272
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1757751191856860}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_title
 --- !u!114 &114447036548761362
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -689,6 +718,18 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'Papel: '
+--- !u!114 &114654071895527120
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1761783309739904}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_metal_trash
 --- !u!114 &114709495584733980
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -869,6 +910,30 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 299/50
+--- !u!114 &114927810263810438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1218319680618434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_glass_trash
+--- !u!114 &114990459365977254
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1959574904086442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_paper_trash
 --- !u!222 &222011607614152494
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -1050,7 +1115,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -88}
+  m_AnchoredPosition: {x: 100, y: -43}
   m_SizeDelta: {x: 196, y: 26}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224153471121172472

@@ -24,7 +24,19 @@
         {
             "key":"street_trash_tooltip_title",
             "value":"Basura en la calle"
-        }, 
+        },
+		{
+			"key":"paper",
+			"value":"papel"
+		},
+		{
+			"key":"metal",
+			"value":"metal"
+		},
+		{
+			"key":"glass",
+			"value":"vidrio"
+		},
         {
             "key":"build_panel_title",
             "value":"Selecciona un edificio"
@@ -152,6 +164,46 @@
 		{
 			"key":"city_hall_payment_notice",
             "value":"La alcaldía te ha pagado $"
-		}
+		},
+		{
+			"key":"house_panel_title",
+            "value":"Casa"
+		},
+		{
+			"key":"house_panel_ordinary_trash",
+			"value":"Basura ordinaria:"
+		},
+		{
+			"key":"house_panel_paper_trash",
+			"value":"Papel:"
+		},
+		{
+			"key":"house_panel_metal_trash",
+			"value":"Metal:"
+		},
+		{
+			"key":"house_panel_glass_trash",
+			"value":"Vidrio:"
+		},
+		{
+			"key":"house_panel_does_not_recycle",
+			"value":"Esta casa no recicla."
+		},
+		{
+			"key":"house_panel_recycles_all",
+			"value":"Esta casa recicla todo tipo de basura."
+		},
+		{
+			"key":"house_panel_recycles_1",
+			"value":"Solo recicla "
+		},
+		{
+			"key":"house_panel_recycles_2",
+			"value":"Recicla "
+		},
+		{
+			"key":"house_panel_and",
+			"value":"y"
+		}						
   ]
 }

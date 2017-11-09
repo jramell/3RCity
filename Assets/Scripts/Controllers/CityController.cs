@@ -279,6 +279,11 @@ public class CityController : MonoBehaviour
         noticePanel = GameObject.FindGameObjectWithTag("Notice").GetComponent<NoticePanel>();
         noticePanel.gameObject.SetActive(false);
     }
+
+    private void Awake()
+    {
+        Paused = true;
+    }
     public void ReStart()
     {
         SceneManager.LoadScene("demo1");

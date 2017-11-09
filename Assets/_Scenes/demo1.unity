@@ -16006,6 +16006,10 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 1797397551167766, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
   m_IsPrefabParent: 0
@@ -18124,7 +18128,7 @@ Prefab:
     - target: {fileID: 224143494566528920, guid: 1872952af081d3845a109b2d68c55fe3,
         type: 2}
       propertyPath: m_AnchoredPosition.y
-      value: -88
+      value: -43
       objectReference: {fileID: 0}
     - target: {fileID: 224143494566528920, guid: 1872952af081d3845a109b2d68c55fe3,
         type: 2}
@@ -18260,6 +18264,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1444315281 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1757751191856860, guid: 1872952af081d3845a109b2d68c55fe3,
+    type: 2}
+  m_PrefabInternal: {fileID: 1444315280}
+--- !u!114 &1444315282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1444315281}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62be83b53898e374d921a9851de57dbd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  key: house_panel_title
 --- !u!1 &1444575138
 GameObject:
   m_ObjectHideFlags: 0
