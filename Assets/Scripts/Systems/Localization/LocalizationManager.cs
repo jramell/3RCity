@@ -2,6 +2,9 @@
 using UnityEngine;
 using System.IO;
 
+/// <summary>
+/// Handles loading and retrieval of localized text
+/// </summary>
 public class LocalizationManager : MonoBehaviour {
 
     /// <summary>
@@ -26,6 +29,7 @@ public class LocalizationManager : MonoBehaviour {
         }
         DontDestroyOnLoad(instance);
 	}
+
 
     /// <summary>
     /// Reads file with localized text as key,value pairs and initializes the localizedText dictionary with it.

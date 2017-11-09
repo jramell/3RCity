@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class IncompleteRecyclingHandler : MonoBehaviour, IBuildingPlacedListener {
 
+    [Tooltip("Seconds Tuto will wait before telling player to buy appropriate campaign")]
     public float secondsBeforeWarning = 12f;
 
     [Tooltip("How many times should Tuto remind the player to buy the appropriate campaign?")]
@@ -39,9 +40,8 @@ public class IncompleteRecyclingHandler : MonoBehaviour, IBuildingPlacedListener
         timesReminded++;
         yield return new WaitForSeconds(secondsBeforeWarning);
         if (!CityController.Current.BoughtCampaign(typeOfCampaignLookingFor)) {
-            Managers.EventManager.DisplayEventMessage(title: "Campañas de reciclaje",
-                description: "Ministro, veo que compró un centro de reciclaje, pero no la campaña que necesita para que funcione."
-                + "\n\nRecuerde que para reciclar metal, necesita comprar la campaña de reciclaje de metal, y así para cada centro de reciclaje.");
+            Managers.EventManager.DisplayEventMessage(title: LocalizationManager.instance.GetLocalizedValue("buy_recycling_campaign_reminder_title"),
+                description: LocalizationManager.instance.GetLocalizedValue("buy_recycling_campaign_reminder_description"));
         }
         campaignActive = false;
     }

@@ -48,6 +48,8 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     [SerializeField]
     private Button campaignsButton;
 
+    private string tutorialTitle;
+
     TutorialManager.Event CurrentEvent {
         get { return currentEvent; }
         set { currentEvent = value; }
@@ -55,9 +57,10 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
 
     void Start() {
         if (startWithTutorial) {
+            tutorialTitle = LocalizationManager.instance.GetLocalizedValue("tutorial_intro_title");
             CurrentEvent = TutorialManager.Event.Introduction;
-            Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "¡Bienvenido, " +
-                "ministro! Yo soy Tuto. Seré su ayudante mientras esté en la ciudad.");
+            Managers.EventManager.DisplayEventMessage(title: tutorialTitle, 
+                                        description: LocalizationManager.instance.GetLocalizedValue("tutorial_intro_description_1"));
             Managers.EventManager.OKButton.onClick.AddListener(() => AdvanceTutorial());
         }
     }
@@ -96,10 +99,9 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
             case TutorialManager.Event.PreviewingBuilding:
                 CurrentEvent = TutorialManager.Event.CampaignInfo;
                 ActivateButtons();
-                Managers.EventManager.DisplayEventMessage(title: "Introducción", description:
-                    "¡Bien! Esos camiones recogerán basura <color=#1ef20e>ordinaria</color> y la tirarán al vertedero. "
-                        + "\n\nConstruir edificios no es barato, pero la alcaldía prometió ayudarnos con $" + CityController.Current.basePayment + " <color=#ffff00>cada semana</color>"
-                        );
+                Managers.EventManager.DisplayEventMessage(title: tutorialTitle, description:
+                    LocalizationManager.instance.GetLocalizedValue("after_building_tutorial_dialog_1") + CityController.Current.basePayment +
+                    LocalizationManager.instance.GetLocalizedValue("after_building_tutorial_dialog_2"));
                 break;
 
             case TutorialManager.Event.CampaignInfo:
@@ -118,23 +120,19 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
             return;
         }
         CurrentEvent = TutorialManager.Event.ObjectiveIntro;
-        Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "Nuestra misión es <color=#ffff00>mantener las calles limpias</color> por " + CityController.Current.matchLength + " días."
-            + " \n\nEl nivel de basura en las calles está en esquina inferior izquierda de la pantalla.");
+        Managers.EventManager.DisplayEventMessage(title: tutorialTitle, description: LocalizationManager.instance.GetLocalizedValue("tutorial_objective_intro_1")
+                                + CityController.Current.matchLength + LocalizationManager.instance.GetLocalizedValue("tutorial_objective_intro_2"));
         streetTrashInfoArrow.SetActive(true);
     }
 
     void PlayTrashOverflowIntro() {
         CurrentEvent = TutorialManager.Event.TrashOverflowIntro;
-        Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "La calle se llena de basura cuando hay demasiada en la caneca de una casa o en el vertedero." 
-            + "\n\nPor ejemplo:"
-            + "\n\n<color=red>            96/80             1920/1800               </color>");
-           // + "\n\nSi se llena el vertedero, no tendremos dónde más meter la basura.");
+        Managers.EventManager.DisplayEventMessage(title: tutorialTitle, description: LocalizationManager.instance.GetLocalizedValue("trash_overflow_intro"));
     }
 
     void PlayBuildTransition() {
         CurrentEvent = TutorialManager.Event.BuildTransition;
-        Managers.EventManager.DisplayEventMessage(title: "Introducción", description: "Para recoger basura de las casas, necesitamos estaciones de camiones que vayan por ella."
-            + "\n\nDéjeme mostrarle cómo construir una.");
+        Managers.EventManager.DisplayEventMessage(title: tutorialTitle, description: LocalizationManager.instance.GetLocalizedValue("how_to_build_dialog"));
     }
 
     void PlayBuildButtonIntro() {
