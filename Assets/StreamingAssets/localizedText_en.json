@@ -148,6 +148,10 @@
         {
             "key":"buy_recycling_campaign_reminder_description",
             "value":"Minister, I see you bought a recycling center, but not the campaign you need to make it work.\n\nRemember that to recycle metal, you need to buy the metal recycling campaign, and so on for each recycling center."
-        }
+        },
+		{
+			"key":"city_hall_payment_notice",
+            "value":"The city hall has paid you $"
+		}
     ]
 }

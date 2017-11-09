@@ -9,6 +9,16 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class CityController : MonoBehaviour
 {
+
+    // -----------------------------------------------------------
+    // Constants
+    // -----------------------------------------------------------
+
+    /// <summary>
+    /// Key used by the localization manager to know what string to put on the payment notice.
+    /// </summary>
+    private const string PAYMENT_NOTICE_KEY = "city_hall_payment_notice";
+
     // -----------------------------------------------------------
     // Attributes and properties
     // -----------------------------------------------------------
@@ -511,7 +521,10 @@ public class CityController : MonoBehaviour
     public void PaymentToPlayer()
     {
         CurrentMoney += basePayment;
-        noticePanel.DisplayNotice("Has recibido $" + basePayment + " de la alcaldía");
+        //noticePanel.DisplayNotice("Has recibido $" + basePayment + " de la alcaldía");
+        string localizedText = LocalizationManager.instance.GetLocalizedValue(PAYMENT_NOTICE_KEY);
+        noticePanel.DisplayNotice(localizedText + basePayment);
+
     }
 
     /// <summary>
