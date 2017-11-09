@@ -148,7 +148,7 @@
         {
             "key":"buy_recycling_campaign_reminder_description",
             "value":"Ministro, veo que compró un centro de reciclaje, pero no la campaña que necesita para que funcione.\n\nRecuerde que para reciclar metal, necesita comprar la campaña de reciclaje de metal, y así para cada centro de reciclaje."
-        }
+        },
 		{
 			"key":"city_hall_payment_notice",
             "value":"La alcaldía te ha pagado $"
