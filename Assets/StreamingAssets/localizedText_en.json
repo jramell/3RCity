@@ -204,6 +204,10 @@
 		{
 			"key":"house_panel_and",
 			"value":"and"
-		}					
+		},
+		{
+			"key":"landfill_panel_title",
+			"value":"Landfill"
+		}			
     ]
 }

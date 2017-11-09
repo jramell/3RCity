@@ -12125,6 +12125,11 @@ Prefab:
       propertyPath: m_SizeDelta.x
       value: 196
       objectReference: {fileID: 0}
+    - target: {fileID: 114421633246778272, guid: 1872952af081d3845a109b2d68c55fe3,
+        type: 2}
+      propertyPath: key
+      value: landfill_panel_title
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 1872952af081d3845a109b2d68c55fe3, type: 2}
   m_IsPrefabParent: 0
