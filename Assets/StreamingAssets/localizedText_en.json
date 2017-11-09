@@ -15,139 +15,139 @@
         },        
         {
             "key": "build_button_tooltip",
-            "value": "Construir"
+            "value": "Build"
         },
         {
             "key":"campaign_button_tooltip",
-            "value":"Campañas"
+            "value":"Campaign"
         }, 
         {
             "key":"street_trash_tooltip_title",
-            "value":"Basura en la calle"
+            "value":"Trash in streets"
         }, 
         {
             "key":"build_panel_title",
-            "value":"Selecciona un edificio"
+            "value":"Select a building"
         }, 
         {
             "key":"ordinary_center_title",
-            "value":"Estación de basura ordinaria"
+            "value":"Ordinary garbage station"
         }, 
         {
             "key":"ordinary_center_description",
-            "value":"Crea camiones que recogen basura <color=#1ef20e>ordinaria</color> y la llevan al vertedero."
+            "value":"Build <color=#1ef20e>ordinary</color> trash picking trucks that will take the trash to the sinkhole."
         }, 
         {
             "key":"ordinary_center_profit",
-            "value":"$0.1/pieza"
+            "value":"$0.1/piece"
         }, 
         {
             "key":"ordinary_center_warning",
-            "value":"Necesita la campaña de papel para funcionar"
+            "value":"You need the paper camping to make it work"
         }, 
         {
             "key":"paper_center_title",
-            "value":"Centro de reciclaje de papel"
+            "value":"Paper recycling center"
         }, 
         {
             "key":"paper_center_description",
-            "value":"Recicla <color=#89a0ff>papel</color>  y crea camiones que lo recogen de las casas."
+            "value":"Recycles <color=#89a0ff>paper</color> and build trucks to pick it up from the houses."
         }, 
         {
             "key":"paper_center_profit",
-            "value":"+$0.1/papel reciclado"
+            "value":"+$0.1/recycled paper"
         }, 
         {
             "key":"paper_center_warning",
-            "value":"Necesita la campaña de papel para funcionar"
+            "value":"You need the paper camping to make it work"
         }, 
         {
             "key":"metal_center_title",
-            "value":"Centro de reciclaje de metal"
+            "value":"Metal recycling center"
         }, 
         {
             "key":"metal_center_description",
-            "value":"Recicla <color=#c1c1c1>metal</color>  y crea camiones que lo recogen de las casas."
+            "value":"Recycles <color=#c1c1c1>metal</color> and build trucks to pick it up from the houses."
         }, 
         {
             "key":"metal_center_profit",
-            "value":"+$0.3/metal reciclado"
+            "value":"+$0.3/recycled metal"
         }, 
         {
             "key":"metal_center_warning",
-            "value":"Necesita la campaña de metal para funcionar"
+            "value":"You need the metal camping to make it work"
         }, 
         {
             "key":"glass_center_title",
-            "value":"Centro de reciclaje de vidrio"
+            "value":"Glass recycling center"
         }, 
         {
             "key":"glass_center_description",
-            "value":"Recicla <b>vidrio</b>  y crea camiones que lo recogen de las casas."
+            "value":"Recycles <b>glass</b> and build trucks to pick it up from the houses."
         }, 
         {
             "key":"glass_center_profit",
-            "value":"+$0.1/vidrio reciclado"
+            "value":"+$0.1/recycled glass"
         }, 
         {
             "key":"glass_center_warning",
-            "value":"Necesita la campaña de vidrio para funcionar"
+            "value":"You need the glass camping to make it work"
         }, 
         {
             "key":"tutorial_intro_title",
-            "value":"Introducción"
+            "value":"Intro"
         }, 
         {
             "key":"tutorial_intro_description_1",
-            "value":"¡Bienvenido, ministro! Yo soy Tuto. Seré su ayudante mientras esté en la ciudad."
+            "value":"Welcome, Minister! I am Tuto. I will be your assistant while you are in town."
         }, 
         {
             "key":"tutorial_objective_intro_1",
-            "value":"Nuestra misión es <color=#ffff00>mantener las calles limpias</color> por "
+            "value":"Our mission is <color=#ffff00> to keep the streets clean </color> for "
         }, 
         {
             "key":"tutorial_objective_intro_2",
-            "value":" días.\n\nEl nivel de basura en las calles está en esquina inferior izquierda de la pantalla."
+            "value":"days.\n\nThe trash level in the streets is in the lower left corner of the screen."
         }, 
         {
             "key":"trash_overflow_intro",
-            "value":"La calle se llena de basura cuando hay demasiada en la caneca de una casa o en el vertedero.\n\nPor ejemplo:\n\n<color=red>            96/80             1920/1800               </color>"
+            "value":"The street fills with garbage when there is too much in the bin of a house or in the shinkhole\n\nFor example:\n\n<color=red>            96/80             1920/1800               </color>"
         }, 
         {
             "key":"how_to_build_dialog",
-            "value":"Para recoger basura de las casas, necesitamos estaciones de camiones que vayan por ella.\n\nDéjeme mostrarle cómo construir una."
+            "value":"To collect garbage from the houses, we need trucks to go for it.\n\nLet me show you how to build one(truck factory)."
         }, 
         {
             "key":"after_building_tutorial_dialog_1",
-            "value":"¡Bien! Esos camiones recogerán basura <color=#1ef20e>ordinaria</color> y la tirarán al vertedero. \n\nConstruir edificios no es barato, pero la alcaldía prometió ayudarnos con $"
+            "value":"¡Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the sinkhole. \n\nBuilding buildings is not cheap, but the mayor promised to help us with $"
         }, 
         {
             "key":"after_building_tutorial_dialog_2",
-            "value":" <color=#ffff00>cada semana</color>"
+            "value":" <color=#ffff00>weekly</color>"
         }, 
         {
             "key":"lose_message",
-            "value":"¡Perdiste! Hay demasiada basura en la calle"
+            "value":"You lost! There's too much trash on the street"
         }, 
         {
             "key":"win_message",
-            "value":"¡Felicitaciones lo lograste!"
+            "value":"Congratulations you made it!"
         }, 
         {
             "key":"restart_button",
-            "value":"Reiniciar"
+            "value":"Restart"
         }, 
         {
             "key":"back_to_main_menu_button",
-            "value":"Volver al menú principal"
+            "value":"Back to main menu"
         }, 
         {
             "key":"buy_recycling_campaign_reminder_title",
-            "value":"Campañas de reciclaje"
+            "value":"Recycling campaigns"
         }, 
         {
             "key":"buy_recycling_campaign_reminder_description",
-            "value":"Ministro, veo que compró un centro de reciclaje, pero no la campaña que necesita para que funcione.\n\nRecuerde que para reciclar metal, necesita comprar la campaña de reciclaje de metal, y así para cada centro de reciclaje."
+            "value":"Minister, I see you bought a recycling center, but not the campaign you need to make it work.\n\nRemember that to recycle metal, you need to buy the metal recycling campaign, and so on for each recycling center."
         }
     ]
 }

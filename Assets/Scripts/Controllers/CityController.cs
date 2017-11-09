@@ -129,7 +129,7 @@ public class CityController : MonoBehaviour
                 Paused = true;
                 pauseBackground.gameObject.SetActive(false);
                 textDerrota.gameObject.SetActive(true);
-                Analytics.CustomEvent("Days before Game Over", new Dictionary<string, object>
+                Analytics.CustomEvent("DaysBeforeGameOver", new Dictionary<string, object>
                 {
                     {"Days", CurrentDay }
                 });
@@ -332,7 +332,7 @@ public class CityController : MonoBehaviour
             Paused = true;
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
-            Analytics.CustomEvent("Trash level after winning", new Dictionary<string, object>
+            Analytics.CustomEvent("TrashLevelAfterWinning", new Dictionary<string, object>
             {
                 {"AmountTrash", TrashInStreets }
             });
