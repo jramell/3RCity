@@ -32,7 +32,7 @@ public class Campaign : MonoBehaviour
     /// The monetary cost of this campaing
     /// </summary>
     [Range(0,1000)]
-    [Tooltip("The monetary cost of this campaing.")]
+    [Tooltip("The monetary cost of this campaign.")]
     public int cost;
 
     /// <summary>

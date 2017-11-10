@@ -19,7 +19,7 @@
         },
         {
             "key":"campaign_button_tooltip",
-            "value":"Campaign"
+            "value":"Campaigns"
         }, 
         {
             "key":"street_trash_tooltip_title",
@@ -47,7 +47,7 @@
         }, 
         {
             "key":"ordinary_center_description",
-            "value":"Build <color=#1ef20e>ordinary</color> trash picking trucks that will take the trash to the landfill."
+            "value":"Builds <color=#1ef20e>ordinary</color> trash trucks that take trash to the landfill."
         }, 
         {
             "key":"ordinary_center_profit",
@@ -115,23 +115,23 @@
         }, 
         {
             "key":"tutorial_objective_intro_1",
-            "value":"Our mission is <color=#ffff00> to keep the streets clean </color> for "
+            "value":"Our mission is <color=#ffff00>to keep the streets clean</color> for "
         }, 
         {
             "key":"tutorial_objective_intro_2",
-            "value":"days.\n\nThe trash level in the streets is in the lower left corner of the screen."
+            "value":" days.\n\nThe trash level in the streets is in the lower left corner of the screen."
         }, 
         {
             "key":"trash_overflow_intro",
-            "value":"The street fills with garbage when there is too much in the bin of a house or in the shinkhole\n\nFor example:\n\n<color=red>            96/80             1920/1800               </color>"
+            "value":"The street fills with garbage when there is too much in the bin of a house or in the landfill\n\nFor example:\n\n<color=red>            96/80             1920/1800               </color>"
         }, 
         {
             "key":"how_to_build_dialog",
-            "value":"To collect garbage from the houses, we need trucks to go for it.\n\nLet me show you how to build one(truck factory)."
+            "value":"To collect garbage from the houses, we need trucks to go for it.\n\nLet me show you how to build a truck station."
         }, 
         {
             "key":"after_building_tutorial_dialog_1",
-            "value":"¡Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the landfill. \n\nBuilding buildings is not cheap, but the mayor promised to help us with $"
+            "value":"Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the landfill. \n\nBuildings are not cheap, but the town hall promised to help us with $"
         }, 
         {
             "key":"after_building_tutorial_dialog_2",
@@ -143,7 +143,7 @@
         }, 
         {
             "key":"win_message",
-            "value":"Congratulations you made it!"
+            "value":"Congratulations, you made it!"
         }, 
         {
             "key":"restart_button",
@@ -191,7 +191,7 @@
 		},
 		{
 			"key":"house_panel_recycles_all",
-			"value":"Recycles all kind of garbage."
+			"value":"Recycles all kinds of garbage."
 		},
 		{
 			"key":"house_panel_recycles_1",
