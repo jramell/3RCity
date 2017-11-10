@@ -1,6 +1,8 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
+using UnityEngine.Networking;
+using System.Collections;
 
 /// <summary>
 /// Handles loading and retrieval of localized text
@@ -41,9 +43,23 @@ public class LocalizationManager : MonoBehaviour {
         if (!File.Exists(filePath)) {
             Debug.Log("Cannot find Localization File at path " + filePath);
         }
-        string dataAsJSON = File.ReadAllText(filePath);
-        LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJSON);
-        for(int i = 0; i < loadedData.items.Length; i++) {
+        if (filePath.Contains("://")) {
+            StartCoroutine(DownloadLocalizedText(filePath));
+            return;
+        }
+        LoadLocalizedTextJson(File.ReadAllText(filePath));
+    }
+
+    private IEnumerator DownloadLocalizedText(string url) {
+        UnityWebRequest localizedTextRequest = UnityWebRequest.Get(url);
+        yield return localizedTextRequest.Send();
+        string downloadedJson = localizedTextRequest.downloadHandler.text;
+        LoadLocalizedTextJson(downloadedJson);
+    }
+
+    private void LoadLocalizedTextJson(string dataAsJson) {
+        LocalizationData loadedData = JsonUtility.FromJson<LocalizationData>(dataAsJson);
+        for (int i = 0; i < loadedData.items.Length; i++) {
             localizedText.Add(loadedData.items[i].key, loadedData.items[i].value);
         }
         finishedLoading = true;
