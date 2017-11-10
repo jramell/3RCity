@@ -63,7 +63,7 @@
         }, 
         {
             "key":"paper_center_description",
-            "value":"Recycles <color=#89a0ff>paper</color> and build trucks to pick it up from the houses."
+            "value":"Recycles <color=#89a0ff>paper</color> and builds trucks to pick it up from the houses."
         }, 
         {
             "key":"paper_center_profit",
@@ -79,7 +79,7 @@
         }, 
         {
             "key":"metal_center_description",
-            "value":"Recycles <color=#c1c1c1>metal</color> and build trucks to pick it up from the houses."
+            "value":"Recycles <color=#c1c1c1>metal</color> and builds trucks to pick it up from the houses."
         }, 
         {
             "key":"metal_center_profit",
@@ -95,7 +95,7 @@
         }, 
         {
             "key":"glass_center_description",
-            "value":"Recycles <b>glass</b> and build trucks to pick it up from the houses."
+            "value":"Recycles <b>glass</b> and builds trucks to pick it up from the houses."
         }, 
         {
             "key":"glass_center_profit",
