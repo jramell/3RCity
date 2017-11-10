@@ -24,7 +24,19 @@
         {
             "key":"street_trash_tooltip_title",
             "value":"Basura en la calle"
-        }, 
+        },
+		{
+			"key":"paper",
+			"value":"papel"
+		},
+		{
+			"key":"metal",
+			"value":"metal"
+		},
+		{
+			"key":"glass",
+			"value":"vidrio"
+		},
         {
             "key":"build_panel_title",
             "value":"Selecciona un edificio"
@@ -148,6 +160,98 @@
         {
             "key":"buy_recycling_campaign_reminder_description",
             "value":"Ministro, veo que compró un centro de reciclaje, pero no la campaña que necesita para que funcione.\n\nRecuerde que para reciclar metal, necesita comprar la campaña de reciclaje de metal, y así para cada centro de reciclaje."
-        }
+        },
+		{
+			"key":"city_hall_payment_notice",
+            "value":"La alcaldía te ha pagado $"
+		},
+		{
+			"key":"house_panel_title",
+            "value":"Casa"
+		},
+		{
+			"key":"house_panel_ordinary_trash",
+			"value":"Basura ordinaria:"
+		},
+		{
+			"key":"house_panel_paper_trash",
+			"value":"Papel:"
+		},
+		{
+			"key":"house_panel_metal_trash",
+			"value":"Metal:"
+		},
+		{
+			"key":"house_panel_glass_trash",
+			"value":"Vidrio:"
+		},
+		{
+			"key":"house_panel_does_not_recycle",
+			"value":"Esta casa no recicla."
+		},
+		{
+			"key":"house_panel_recycles_all",
+			"value":"Esta casa recicla todo tipo de basura."
+		},
+		{
+			"key":"house_panel_recycles_1",
+			"value":"Solo recicla "
+		},
+		{
+			"key":"house_panel_recycles_2",
+			"value":"Recicla "
+		},
+		{
+			"key":"house_panel_and",
+			"value":"y"
+		},
+		{
+			"key":"landfill_panel_title",
+			"value":"Vertedero"
+		},
+		{
+			"key":"campaigns_panel_title",
+			"value":"Compra campañas de reciclaje"
+		},
+		{
+			"key":"campaigns_panel_paper",
+			"value":"Reciclar papel"
+		},
+		{
+			"key":"campaigns_panel_metal",
+			"value":"Reciclar metal"
+		},
+		{
+			"key":"campaigns_panel_glass",
+			"value":"Reciclar vidrio"
+		},
+		{
+			"key":"building_panel_ordinary_title",
+			"value":"Estación de camiones ordinarios"
+		},
+		{
+			"key":"building_panel_paper_title",
+			"value":"Centro de reciclaje de papel"
+		},
+		{
+			"key":"building_panel_metal_title",
+			"value":"Centro de reciclaje de metal"
+		},
+		{
+			"key":"building_panel_glass_title",
+			"value":"Centro de reciclaje de vidrio"
+		},
+		{
+			"key":"building_panel_paper_warning",
+			"value":"Este centro no funciona porque la <b>campaña de papel</b> no ha sido comprada."
+		},
+		{
+			"key":"building_panel_metal_warning",
+			"value":"Este centro no funciona porque la <b>campaña de metal</b> no ha sido comprada."
+		},
+		{
+			"key":"building_panel_glass_warning",
+			"value":"Este centro no funciona porque la <b>campaña de vidrio</b> no ha sido comprada."
+		}				
   ]
 }

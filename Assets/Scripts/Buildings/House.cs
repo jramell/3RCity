@@ -28,6 +28,11 @@ public class House : MonoBehaviour
     /// </summary>
     private const float CanContentHighPosition = 0.92f;
 
+    private const string DOES_NOT_RECYCLE_KEY = "house_panel_does_not_recycle";
+    private const string RECYCLES_1_KEY = "house_panel_recycles_1";
+    private const string RECYCLES_2_KEY = "house_panel_recycles_2";
+    private const string RECYCLES_ALL_KEY = "house_panel_recycles_all";
+    private const string AND_KEY = "house_panel_and";
 
     // ------------------------------------------------------------
     // Attributes and properties
@@ -450,6 +455,8 @@ public class House : MonoBehaviour
     /// </summary>
     private void OnMouseEnter()
     {
+        if (CityController.Current == null || CityController.Current.Paused)
+            return;
         houseInfoDisplay.DisplayPanel( FindExtraInfoMessage(),
             displayOrdinary: true, ordinaryAmount: ordinaryTrashCan.CurrentAmount, ordinaryCapacityP: ordinaryCanCapacity, 
             displayGlass: IsRecyclingGlass, glassAmount: glassTrashCan.CurrentAmount, glassCapacityP: glassCanCapacity,
@@ -463,6 +470,8 @@ public class House : MonoBehaviour
     /// </summary>
     private void OnMouseOver()
     {
+        if (CityController.Current == null || CityController.Current.Paused)
+            return;
         houseInfoDisplay.UpdateValues(
             ordinaryAmount: ordinaryTrashCan.CurrentAmount,
             glassAmount: glassTrashCan.CurrentAmount,
@@ -476,6 +485,8 @@ public class House : MonoBehaviour
     /// </summary>
     private void OnMouseExit()
     {
+        if (CityController.Current == null || CityController.Current.Paused)
+            return;
         houseInfoDisplay.gameObject.SetActive(false);
     }
 
@@ -492,37 +503,47 @@ public class House : MonoBehaviour
         if(IsRecyclingPaper)
         {
             recyclingCansCounter++;
-            garbageNames.Add( "papel");
+            //garbageNames.Add( "papel");
+            garbageNames.Add(LocalizationManager.instance.GetLocalizedValue("paper"));
         }
 
         if (IsRecyclingMetal)
         {
             recyclingCansCounter++;
-            garbageNames.Add("metal");
+            //garbageNames.Add("metal");
+            garbageNames.Add(LocalizationManager.instance.GetLocalizedValue("metal"));
         }
 
         if (IsRecyclingGlass)
         {
             recyclingCansCounter++;
-            garbageNames.Add("vidrio");
+            //garbageNames.Add("vidrio");
+            garbageNames.Add(LocalizationManager.instance.GetLocalizedValue("glass"));
         }
 
         switch (recyclingCansCounter)
         {
             case 0:
-                message = "Esta casa no recicla.";
+                //message = "Esta casa no recicla.";
+                message = LocalizationManager.instance.GetLocalizedValue(DOES_NOT_RECYCLE_KEY);
                 break;
 
             case 1:
-                message = "Esta casa solo recicla " + garbageNames[0] + ".";
+                //message = "Esta casa solo recicla " + garbageNames[0] + ".";
+                message = LocalizationManager.instance.GetLocalizedValue(RECYCLES_1_KEY);
+                message += garbageNames[0] + ".";
                 break;
 
             case 2:
-                message = "Esta casa recicla " + garbageNames[0] + " y " + garbageNames[1] + ".";
+                //message = "Esta casa recicla " + garbageNames[0] + " y " + garbageNames[1] + ".";
+                message = LocalizationManager.instance.GetLocalizedValue(RECYCLES_2_KEY);
+                message += garbageNames[0] + " " + LocalizationManager.instance.GetLocalizedValue(AND_KEY);
+                message += " " + garbageNames[1] + ".";
                 break;
 
             case 3:
-                message = "Esta casa recicla todo tipo de desechos.";
+                //message = "Esta casa recicla todo tipo de desechos.";
+                message = LocalizationManager.instance.GetLocalizedValue(RECYCLES_ALL_KEY);
                 break;
 
             default:

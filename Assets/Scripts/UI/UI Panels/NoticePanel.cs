@@ -12,7 +12,7 @@ public class NoticePanel : MonoBehaviour
     private Text messageText;
 
     /// <summary>
-    /// 
+    /// Seconds that the notice is going to be displayed.
     /// </summary>
     [Range(1,10)]
     [Tooltip("Seconds that the notice is going to be displayed.")]

@@ -80,6 +80,9 @@ public class DisplayGarbagePanel : MonoBehaviour
     public void DisplayPanel(bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
     {
 
+        if (CityController.Current.Paused)
+            return;
+
         rectTransform = GetComponent<RectTransform>();
 
         ordinaryCapacity = ordinaryCapacityP;
@@ -124,6 +127,8 @@ public class DisplayGarbagePanel : MonoBehaviour
     /// <param name="metalCapacityP"></param>
     public void DisplayPanel(string extraInfo, bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
     {
+        if (CityController.Current.Paused)
+            return;
 
         rectTransform = GetComponent<RectTransform>();
 
@@ -158,6 +163,9 @@ public class DisplayGarbagePanel : MonoBehaviour
     /// </summary>  
     public void DisplayPanel(string title, string extraInfo, bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
     {
+        if (CityController.Current.Paused)
+            return;
+
         rectTransform = GetComponent<RectTransform>();
 
         titleText.text = title;
@@ -192,6 +200,9 @@ public class DisplayGarbagePanel : MonoBehaviour
     /// </summary>  
     public void DisplayPanel(string title, string extraInfo, bool displayExtraInfo, bool displayOrdinary, bool displayPaper, bool displayMetal, bool displayGlass, int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount, int ordinaryCapacityP, int glassCapacityP, int paperCapacityP, int metalCapacityP)
     {
+        if (CityController.Current.Paused)
+            return;
+
         rectTransform = GetComponent<RectTransform>();
 
         titleText.text = title;
@@ -231,6 +242,9 @@ public class DisplayGarbagePanel : MonoBehaviour
     /// <param name="metalAmount"></param>
     public void UpdateValues (int ordinaryAmount, int paperAmount, int glassAmount, int metalAmount)
     {
+        if (CityController.Current.Paused)
+            return;
+
         float percentage;
 
         percentage = (float)ordinaryAmount / (float)ordinaryCapacity;
@@ -270,6 +284,5 @@ public class DisplayGarbagePanel : MonoBehaviour
             metalText.color = dangerColor;
 
     }
-
 
 }

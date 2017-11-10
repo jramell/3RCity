@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   camapaignType: 0
   cost: 50
-  campaignName: Reciclar papel
+  campaignNameKey: campaigns_panel_metal
   description: "Los ciudadanos aprenden a separar el papel y el cart\xF3n de los residuos
     ordinarios y los depositan en una caneca separada."
   logo: {fileID: 21300000, guid: c104bff1819897046931660c92097696, type: 3}

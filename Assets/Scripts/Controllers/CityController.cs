@@ -9,6 +9,16 @@ using UnityEngine.SceneManagement;
 /// </summary>
 public class CityController : MonoBehaviour
 {
+
+    // -----------------------------------------------------------
+    // Constants
+    // -----------------------------------------------------------
+
+    /// <summary>
+    /// Key used by the localization manager to know what string to put on the payment notice.
+    /// </summary>
+    private const string PAYMENT_NOTICE_KEY = "city_hall_payment_notice";
+
     // -----------------------------------------------------------
     // Attributes and properties
     // -----------------------------------------------------------
@@ -129,7 +139,7 @@ public class CityController : MonoBehaviour
                 Paused = true;
                 pauseBackground.gameObject.SetActive(false);
                 textDerrota.gameObject.SetActive(true);
-                Analytics.CustomEvent("Days before Game Over", new Dictionary<string, object>
+                Analytics.CustomEvent("DaysBeforeGameOver", new Dictionary<string, object>
                 {
                     {"Days", CurrentDay }
                 });
@@ -269,6 +279,11 @@ public class CityController : MonoBehaviour
         noticePanel = GameObject.FindGameObjectWithTag("Notice").GetComponent<NoticePanel>();
         noticePanel.gameObject.SetActive(false);
     }
+
+    private void Awake()
+    {
+        Paused = true;
+    }
     public void ReStart()
     {
         SceneManager.LoadScene("demo1");
@@ -332,7 +347,7 @@ public class CityController : MonoBehaviour
             Paused = true;
             textVictoria.gameObject.SetActive(true);
             gameOverPanel.gameObject.SetActive(true);
-            Analytics.CustomEvent("Trash level after winning", new Dictionary<string, object>
+            Analytics.CustomEvent("TrashLevelAfterWinning", new Dictionary<string, object>
             {
                 {"AmountTrash", TrashInStreets }
             });
@@ -511,7 +526,10 @@ public class CityController : MonoBehaviour
     public void PaymentToPlayer()
     {
         CurrentMoney += basePayment;
-        noticePanel.DisplayNotice("Has recibido $" + basePayment + " de la alcaldía");
+        //noticePanel.DisplayNotice("Has recibido $" + basePayment + " de la alcaldía");
+        string localizedText = LocalizationManager.instance.GetLocalizedValue(PAYMENT_NOTICE_KEY);
+        noticePanel.DisplayNotice(localizedText + basePayment);
+
     }
 
     /// <summary>
