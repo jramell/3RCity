@@ -224,6 +224,34 @@
 		{
 			"key":"campaigns_panel_glass",
 			"value":"Reciclar vidrio"
-		}			
+		},
+		{
+			"key":"building_panel_ordinary_title",
+			"value":"Estación de camiones ordinarios"
+		},
+		{
+			"key":"building_panel_paper_title",
+			"value":"Centro de reciclaje de papel"
+		},
+		{
+			"key":"building_panel_metal_title",
+			"value":"Centro de reciclaje de metal"
+		},
+		{
+			"key":"building_panel_glass_title",
+			"value":"Centro de reciclaje de vidrio"
+		},
+		{
+			"key":"building_panel_paper_warning",
+			"value":"Este centro no funciona porque la <b>campaña de papel</b> no ha sido comprada."
+		},
+		{
+			"key":"building_panel_metal_warning",
+			"value":"Este centro no funciona porque la <b>campaña de metal</b> no ha sido comprada."
+		},
+		{
+			"key":"building_panel_glass_warning",
+			"value":"Este centro no funciona porque la <b>campaña de vidrio</b> no ha sido comprada."
+		}				
   ]
 }

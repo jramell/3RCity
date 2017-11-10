@@ -6,6 +6,10 @@ using UnityEngine.Analytics;
 public class TrashTruckStation : Buildable {
 
     public const int TRUCK_CAPACITY = 3;
+    private const string ORDINARY_TC_NAME_KEY = "building_panel_ordinary_title";
+    private const string PAPER_TC_NAME_KEY = "building_panel_paper_title";
+    private const string GLASS_TC_NAME_KEY = "building_panel_glass_title";
+    private const string METAL_TC_NAME_KEY = "building_panel_metal_title";
 
     [SerializeField]
     Transform trashTrucksSpawn;
@@ -143,26 +147,26 @@ public class TrashTruckStation : Buildable {
             switch (CollectedGarbageType)
             {
                 case Garbage.Type.Ordinary:
-                    panelTitle = "Estación de basura ordinaria";
+                    panelTitle = LocalizationManager.instance.GetLocalizedValue(ORDINARY_TC_NAME_KEY);
                     displayWarning = false;
                     break;
                 case Garbage.Type.Paper:
-                    panelTitle = "Centro de reciclaje de papel";
+                    panelTitle = LocalizationManager.instance.GetLocalizedValue(PAPER_TC_NAME_KEY);
                     displayWarning = !CityController.Current.PaperCampaignBought;
                     break;
                 case Garbage.Type.Glass:
-                    panelTitle = "Centro de reciclaje de vidrio";
+                    panelTitle = LocalizationManager.instance.GetLocalizedValue(GLASS_TC_NAME_KEY);
                     displayWarning = !CityController.Current.GlassCampaignBought;
                     break;
                 case Garbage.Type.Metal:
-                    panelTitle = "Centro de reciclaje de metal";
+                    panelTitle = LocalizationManager.instance.GetLocalizedValue(METAL_TC_NAME_KEY);
                     displayWarning = !CityController.Current.MetalCampaignBought;
                     break;
                 default:
                     break;
             }
 
-            infoDisplay.DisplayPanel(panelTitle, description, displayExtraInfo: displayWarning,
+            infoDisplay.DisplayPanel(panelTitle, LocalizationManager.instance.GetLocalizedValue(descriptionKey), displayExtraInfo: displayWarning,
                 displayOrdinary: false, ordinaryAmount: 0, ordinaryCapacityP: 0,
                 displayGlass: false, glassAmount: 0, glassCapacityP: 0,
                 displayMetal: false, metalAmount: 0, metalCapacityP: 0,

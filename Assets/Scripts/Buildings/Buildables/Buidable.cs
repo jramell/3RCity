@@ -6,9 +6,9 @@
 public abstract class Buildable : MonoBehaviour
 {
     [Header("Buildable Settings")]
-    [Tooltip("Building's description that appears in menus")]
+    [Tooltip("Localization key for the building's description that appears on the UI")]
     [SerializeField]
-    protected string description;
+    protected string descriptionKey;
 
     [SerializeField]
     protected int cost;
@@ -63,7 +63,7 @@ public abstract class Buildable : MonoBehaviour
     {
         if(showInfoPanel && infoDisplay != null)
         {
-            infoDisplay.DisplayPanel(description,
+            infoDisplay.DisplayPanel(descriptionKey,
                 displayOrdinary: false, ordinaryAmount: 0, ordinaryCapacityP: 0,
                 displayGlass: false, glassAmount: 0, glassCapacityP: 0,
                 displayMetal: false, metalAmount: 0, metalCapacityP: 0,

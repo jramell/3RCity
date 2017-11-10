@@ -179,8 +179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af4b0384b5c5286499565a86b91f9a20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  description: "Este centro no funciona. Se necesita comprar la campa\xF1a de papel
-    para empezar operaciones."
+  descriptionKey: building_panel_paper_warning
   cost: 75
   trashTrucksSpawn: {fileID: 4584324513170772}
   collectedGarbageType: 1

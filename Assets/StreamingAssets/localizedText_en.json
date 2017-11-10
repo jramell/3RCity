@@ -43,11 +43,11 @@
 		},
         {
             "key":"ordinary_center_title",
-            "value":"Ordinary garbage station"
+            "value":"Ordinary garbage truck station"
         }, 
         {
             "key":"ordinary_center_description",
-            "value":"Build <color=#1ef20e>ordinary</color> trash picking trucks that will take the trash to the sinkhole."
+            "value":"Build <color=#1ef20e>ordinary</color> trash picking trucks that will take the trash to the landfill."
         }, 
         {
             "key":"ordinary_center_profit",
@@ -131,7 +131,7 @@
         }, 
         {
             "key":"after_building_tutorial_dialog_1",
-            "value":"¡Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the sinkhole. \n\nBuilding buildings is not cheap, but the mayor promised to help us with $"
+            "value":"¡Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the landfill. \n\nBuilding buildings is not cheap, but the mayor promised to help us with $"
         }, 
         {
             "key":"after_building_tutorial_dialog_2",
@@ -224,6 +224,34 @@
 		{
 			"key":"campaigns_panel_glass",
 			"value":"Recycle glass"
+		},
+		{
+			"key":"building_panel_ordinary_title",
+			"value":"Ordinary garbage truck station"
+		},
+		{
+			"key":"building_panel_paper_title",
+			"value":"Paper recycling center"
+		},
+		{
+			"key":"building_panel_metal_title",
+			"value":"Metal recycling center"
+		},
+		{
+			"key":"building_panel_glass_title",
+			"value":"Glass recycling center"
+		},
+		{
+			"key":"building_panel_paper_warning",
+			"value":"This center is not working because the <b>paper campaign</b> has not been bought."
+		},
+		{
+			"key":"building_panel_metal_warning",
+			"value":"This center is not working because the <b>metal campaign</b> has not been bought."
+		},
+		{
+			"key":"building_panel_glass_warning",
+			"value":"This center is not working because the <b>glass campaign</b> has not been bought."
 		}		
     ]
 }
