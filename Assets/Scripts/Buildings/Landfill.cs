@@ -113,9 +113,8 @@ public class Landfill : TrashTreatmentCenter
         if (!fillAlertDisplayed &&  trashPercent >= 0.6f)
         {
             fillAlertDisplayed = true;
-            Managers.EventManager.DisplayEventMessage(title: "Alerta vertedero", description: "¡Ministro, el vertedero está a punto de llenarse!"
-                + "\n\nSi se llena por completo, toda la basura que intentemos meter se irá a las calles." 
-                + "\n\nRecuerde que sólo va al vertedero la basura <color=#1ef20e>ordinaria</color>. Las cosas van mejor cuando usamos campañas de reciclaje.");
+            Managers.EventManager.DisplayEventMessage(title: LocalizationManager.instance.GetLocalizedValue("landfill_almost_full_alert_title")
+                , description: LocalizationManager.instance.GetLocalizedValue("landfill_almost_full_alert_description"));
         }
     }
 

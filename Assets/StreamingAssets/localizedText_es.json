@@ -252,6 +252,22 @@
 		{
 			"key":"building_panel_glass_warning",
 			"value":"Este centro no funciona porque la <b>campaña de vidrio</b> no ha sido comprada."
-		}				
+		},
+        {
+            "key":"programming_credits",
+            "value":"Programación"
+        },
+        {
+            "key":"art_credits",
+            "value":"Arte"
+        },
+        {
+            "key":"landfill_almost_full_alert_title",
+            "value":"Alerta vertedero"
+        },
+        {
+            "key":"landfill_almost_full_alert_description",
+            "value":"¡Ministro, el vertedero está a punto de llenarse!\n\nSi se llena por completo, toda la basura que intentemos meter se irá a las calles.\n\nRecuerde que sólo va al vertedero la basura <color=#1ef20e>ordinaria</color>. Las cosas van mejor cuando usamos campañas de reciclaje."
+        }
   ]
 }

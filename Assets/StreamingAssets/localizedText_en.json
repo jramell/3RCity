@@ -131,7 +131,7 @@
         }, 
         {
             "key":"after_building_tutorial_dialog_1",
-            "value":"Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the landfill. \n\nBuildings are not cheap, but the town hall promised to help us with $"
+            "value":"Great! Those trucks will pick up <color=#1ef20e>ordinary</color> garbage and throw it into the landfill. \n\nBuildings are not cheap, but the city hall promised to help us with $"
         }, 
         {
             "key":"after_building_tutorial_dialog_2",
@@ -211,7 +211,7 @@
 		},
 		{
 			"key":"campaigns_panel_title",
-			"value":"Buy recycling campagins"
+			"value":"Buy recycling campaigns"
 		},
 		{
 			"key":"campaigns_panel_paper",
@@ -252,6 +252,22 @@
 		{
 			"key":"building_panel_glass_warning",
 			"value":"This center is not working because the <b>glass campaign</b> has not been bought."
-		}		
+		},
+        {
+            "key":"programming_credits",
+            "value":"Programming"
+        },
+        {
+            "key":"art_credits",
+            "value":"Art"
+        },
+        {
+            "key":"landfill_almost_full_alert_title",
+            "value":"Landfill alert"
+        },
+        {
+            "key":"landfill_almost_full_alert_description",
+            "value":"Minister, the landfill is about to fill up!\n\nOnce it's full, all the trash we try to dump in it will overflow to the streets.\n\nRemember that only <color=#1ef20e>ordinary</color> trash goes into the landfill. Things might get better if we use recycling campaigns."
+        }
     ]
 }
