@@ -1,5 +1,9 @@
 # 3RCity
-Construction game about recycling built by students from the University of the Andes. There aren't any playable builds published yet.
+Unity project of a construction game about recycling built by students from the Universidad de los Andes. 
+
+## Builds
+
+Newgrounds: https://www.newgrounds.com/portal/view/701972
 
 ## Credits
 

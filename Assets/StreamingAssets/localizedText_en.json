@@ -55,7 +55,7 @@
         }, 
         {
             "key":"ordinary_center_warning",
-            "value":"You need the paper campaing to make it work"
+            "value":"You need the paper campaign to make it work"
         }, 
         {
             "key":"paper_center_title",
@@ -71,7 +71,7 @@
         }, 
         {
             "key":"paper_center_warning",
-            "value":"You need the paper campaing to make it work"
+            "value":"You need the paper campaign to make it work"
         }, 
         {
             "key":"metal_center_title",
@@ -87,7 +87,7 @@
         }, 
         {
             "key":"metal_center_warning",
-            "value":"You need the metal campaing to make it work"
+            "value":"You need the metal campaign to make it work"
         }, 
         {
             "key":"glass_center_title",
@@ -103,7 +103,7 @@
         }, 
         {
             "key":"glass_center_warning",
-            "value":"You need the glass campaing to make it work"
+            "value":"You need the glass campaign to make it work"
         }, 
         {
             "key":"tutorial_intro_title",
@@ -151,9 +151,10 @@
         }, 
         {
             "key":"back_to_main_menu_button",
-            "value":"Back to main menu"
+            "value":"Main menu"
         }, 
         {
+            "key":"buy_recycling_campaign_reminder_title",
             "key":"buy_recycling_campaign_reminder_title",
             "value":"Recycling campaigns"
         }, 
