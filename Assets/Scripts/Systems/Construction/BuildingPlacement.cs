@@ -8,8 +8,7 @@ public class BuildingPlacement : MonoBehaviour {
 
     List<IBuildingPlacedListener> buildingPlacedListeners;
 
-    void Start()
-    {
+    void Start() {
         buildingPreview = GetComponent<BuildingPreview>();
     }
 
@@ -37,8 +36,7 @@ public class BuildingPlacement : MonoBehaviour {
         CityController.Current.CurrentMoney -= buildable.Cost;
     }
 
-	public void PreviewBuilding(Buildings.Type buildingType)
-    {
+	public void PreviewBuilding(Buildings.Type buildingType) {
         if (UIController.Current.State == UI.State.BuildingPreview) {
             buildingPreview.CancelPreview();
         }
@@ -46,8 +44,7 @@ public class BuildingPlacement : MonoBehaviour {
         buildingPreview.StartBuildingPreview(buildingType);
     }
 
-    public bool CanBuildingBePlacedInTile(Buildings.Type buildingType, string tileTag)
-    {
+    public bool CanBuildingBePlacedInTile(Buildings.Type buildingType, string tileTag) {
         return TilesBuildingCanBePlaced(buildingType).Contains(tileTag);
     }
 
@@ -56,8 +53,7 @@ public class BuildingPlacement : MonoBehaviour {
     /// Exists so logic regarding building placement doesn't have to be repeated
     /// </summary>
     /// <returns>List with the tags of tiles where a building of buildingType can be placed</returns>
-    List<string> TilesBuildingCanBePlaced(Buildings.Type buildingType)
-    {
+    List<string> TilesBuildingCanBePlaced(Buildings.Type buildingType) {
         List<string> answer = new List<string>(2);
         answer.Add("PisoTipo3"); //so far, all buildings can be built in PisoTipo3
         return answer;

@@ -13,35 +13,27 @@ public class BuildingPreview : MonoBehaviour {
 
     bool isPreviewPlaceable;
 
-    void Update()
-    {
-        if (IsMouseInViewport())
-        {
+    void Update() {
+        if (IsMouseInViewport()) {
             PreviewBuilding();
             HandlePlayerClick();
         }
     }
     
-    void PreviewBuilding()
-    {
+    void PreviewBuilding() {
         Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition);
         RaycastHit hit;
-        if (Physics.Raycast(mouseRay, out hit, 200, placeableLayerMask)) 
-        {
+        if (Physics.Raycast(mouseRay, out hit, 200, placeableLayerMask)) {
             previewingBuilding.transform.position = hit.point;
             isPreviewPlaceable = (!Physics.Raycast(mouseRay, 200, obstacleLayerMask)) && Managers.BuildingPlacementManager.
                             CanBuildingBePlacedInTile(previewingBuildingType, hit.collider.tag);
-            if (isPreviewPlaceable)
-            {
+            if (isPreviewPlaceable) {
                 previewingBuildable.ColorGreen();
-                previewingBuilding.transform.position =
-                    new Vector3(hit.collider.gameObject.transform.position.x + 1.8f,
+                previewingBuilding.transform.position = new Vector3(
+                                hit.collider.gameObject.transform.position.x + 1.8f,
                                 hit.collider.gameObject.transform.position.y,
-                                hit.collider.gameObject.transform.position.z + 2f); //should actually fix prefabs
-                            //instead but that would mess up level generation
-            }
-            else
-            {
+                                hit.collider.gameObject.transform.position.z + 2f);
+            } else {
                 previewingBuildable.ColorRed();
             }
         }
@@ -54,8 +46,7 @@ public class BuildingPreview : MonoBehaviour {
     {
         if (Input.GetMouseButtonDown(0))
         {
-            if (isPreviewPlaceable)
-            {
+            if (isPreviewPlaceable) {
                 Managers.BuildingPlacementManager.Place(previewingBuildable, previewingBuildingType);
                 StopPreview();
             }

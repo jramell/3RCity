@@ -66,7 +66,6 @@ public class TutorialManager : MonoBehaviour, IBuildingPlacedListener {
     }
 
     private void AdvanceTutorial() {
-        //Debug.Log("advance tutorial called with currentEvent = " + currentEvent);
         switch (CurrentEvent) {
             case TutorialManager.Event.Introduction:
                 PlayObjectiveIntro(true);

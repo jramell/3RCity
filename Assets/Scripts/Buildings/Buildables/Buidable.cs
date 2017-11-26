@@ -38,10 +38,7 @@ public abstract class Buildable : MonoBehaviour
 
     public int Cost
     {
-        get
-        {
-            return cost;
-        }
+        get { return cost; }
     }
 
     /// <summary>
@@ -75,14 +72,7 @@ public abstract class Buildable : MonoBehaviour
     /// Executed each frame the mouse is over the collider.
     /// Updates the info panel's data.
     /// </summary>
-    protected virtual void OnMouseOver()
-    {
-
-        /*if (showInfoPanel && infoDisplay != null)
-        {
-            // Nothing for now
-        }*/
-    }
+    protected virtual void OnMouseOver() { }
 
     /// <summary>
     /// Executed when the mouse leaves the collider.
@@ -90,7 +80,8 @@ public abstract class Buildable : MonoBehaviour
     /// </summary>
     protected virtual void OnMouseExit()
     {
-        if (showInfoPanel && infoDisplay != null)
+        if (showInfoPanel && infoDisplay != null) {
             infoDisplay.gameObject.SetActive(false);
+        }
     }
 }

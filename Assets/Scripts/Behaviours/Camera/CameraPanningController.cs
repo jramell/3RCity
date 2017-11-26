@@ -2,8 +2,7 @@
 
 /// <summary>
 /// Moves object it's attached to along its local X and Z axes according to mouse position within viewport. Made
-/// to handle camera panning. Doesn't move any camera directly so each camera can be rotated freely without messing
-/// up its panning axes.
+/// to handle camera panning. Doesn't move any camera directly.
 /// </summary>
 public class CameraPanningController : MonoBehaviour
 {
@@ -41,28 +40,28 @@ public class CameraPanningController : MonoBehaviour
     /// This object won't move in its local +X more than this
     /// </summary>
     [Range(0.0f, 100000f)]
-    [Tooltip("Camera won't move in its local +X more than this")]
+    [Tooltip("Camera won't move more to its right (+X axis) than this")]
     public float MaxRightTranslation;
 
     /// <summary>
     /// This object won't move won't move in its local -X more than this
     /// </summary>
     [Range(-100000f, 0.0f)]
-    [Tooltip("Camera won't move in its local -X more than this")]
+    [Tooltip("Camera won't move more to its left (-X axis) than this")]
     public float MaxLeftTranslation;
 
     /// <summary>
     /// This object won't move in its local +Z more than this
     /// </summary>
     [Range(0.0f, 100000f)]
-    [Tooltip("Camera won't move in its local +Z more than this")]
+    [Tooltip("Camera won't move forward (its +Z axis) more than this")]
     public float MaxForwardTranslation;
 
     /// <summary>
     /// This object won't move in its local -Z more than this
     /// </summary>
     [Range(-100000f, 0.0f)]
-    [Tooltip("Camera won't move in its local -Z more than this")]
+    [Tooltip("Camera won't move backwards (its -Z axis) more than this")]
     public float MaxBackwardTranslation;
 
     /// <summary>
@@ -76,7 +75,7 @@ public class CameraPanningController : MonoBehaviour
     private float ZTranslationFromStartingPosition = 0f;
 
     /// <summary>
-    /// Vector this object is going to be translated every frame
+    /// Amount the camera is going to be translated in the current frame
     /// </summary>
     private Vector3 translateAmount;
 
@@ -91,39 +90,31 @@ public class CameraPanningController : MonoBehaviour
     private float currentTopThreshold;
 
     /// <summary>
-    /// Can be 0, 1 or -1. 1 means positive on the X axis, -1 means negative.
+    /// Is 0, 1 or -1. 1 means positive on the X axis, -1 means negative.
     /// </summary>
     private int directionX = 0;
 
     /// <summary>
-    /// Can be 0, 1 or -1. 1 means positive on the Z axis, -1 means negative.
+    /// Is 0, 1 or -1. 1 means positive on the Z axis, -1 means negative.
     /// </summary>
     private int directionZ = 0;
 
-    private void Start()
-    {
+    private void Start() {
         translateAmount = Vector3.zero;
-        float sideThresholdPercent = WidthPercentageSideThreshold * Screen.width;
-        currentSideThreshold = Mathf.Max(MinSideThreshold, sideThresholdPercent);
+        float percentualSideThreshold = WidthPercentageSideThreshold * Screen.width;
+        currentSideThreshold = Mathf.Max(MinSideThreshold, percentualSideThreshold);
 
-        float topThresholdPercent = HeightPercentageTopThreshold * Screen.height;
-        currentTopThreshold = Mathf.Max(MinTopThreshold, topThresholdPercent);
+        float percentualTopThreshold = HeightPercentageTopThreshold * Screen.height;
+        currentTopThreshold = Mathf.Max(MinTopThreshold, percentualTopThreshold);
     }
 
-    private void Update()
-    {
+    private void Update() {
         directionX = 0;
         directionZ = 0;
-
-        /*if (IsMouseInsideViewport())
-        {
-            ManageCameraPanning();
-        }*/
         ManageCameraPanning();
     }
 
-    void ManageCameraPanning()
-    {
+    void ManageCameraPanning() {
         FindPanningDirection();
         translateAmount.x = MovementSpeed * Time.deltaTime * directionX;
         translateAmount.z = MovementSpeed * Time.deltaTime * directionZ;
@@ -133,63 +124,49 @@ public class CameraPanningController : MonoBehaviour
         ZTranslationFromStartingPosition += translateAmount.z;
     }
 
-    private bool IsMouseInsideViewport()
-    {
-        //Input.mousePosition is (0,0) in viewport's bottom left corner and 
-        //(Screen.width, Screen.height) in its top right corner
-        return
-            Input.mousePosition.x >= 0f && Input.mousePosition.y >= 0f
-            && Input.mousePosition.x <= Screen.width && Input.mousePosition.y <= Screen.height;
-    }
-
     /// <summary>
     /// Checks mouse position within viewport to determine the direction in which the player
     /// wants to pan the camera.
     /// </summary>
-    private void FindPanningDirection()
-    {
-        if (Input.mousePosition.x < currentSideThreshold)
-        {
+    private void FindPanningDirection() {
+        if (Input.mousePosition.x < currentSideThreshold) {
             directionX = -1;
-        }
-        else if (Input.mousePosition.x > Screen.width - currentSideThreshold)
-        {
+        } else if (Input.mousePosition.x > Screen.width - currentSideThreshold) {
             directionX = 1;
-        }
-        if (Input.mousePosition.y < currentTopThreshold)
-        {
+        } if (Input.mousePosition.y < currentTopThreshold) {
             directionZ = -1;
-        }
-        else if (Input.mousePosition.y > Screen.height - currentTopThreshold)
-        {
+        } else if (Input.mousePosition.y > Screen.height - currentTopThreshold) {
             directionZ = 1;
         }
     }
 
     /// <summary>
-    /// Doesn't allow the camera to move beyond MaxRightTranslation, MaxLeftTranslation, 
-    /// MaxBackwardTranslation and MaxForwardTranslation.
+    /// Doesn't allow the camera to move beyond MaxRightTranslation, MaxLeftTranslation, MaxBackwardTranslation
+    /// and MaxForwardTranslation
     /// </summary>
-    private void KeepTranslationInLimits()
-    {
-        //if moving more to the left than MaxLeftTranslation
-        if (XTranslationFromStartingPosition + translateAmount.x < MaxLeftTranslation)
-        {
-            //move up to MaxLeftTranslation
-            translateAmount.x = MaxLeftTranslation - XTranslationFromStartingPosition;
+    private void KeepTranslationInLimits() {
+        KeepXTranslationInLimits();
+        KeepZTranslationInLimits();
+    }
+
+    private void KeepXTranslationInLimits() {
+        bool goingBeyondMaxLeftTranslation = XTranslationFromStartingPosition + translateAmount.x < MaxLeftTranslation;
+        bool goingBeyondMaxRightTranslation = XTranslationFromStartingPosition + translateAmount.x > MaxRightTranslation;
+        if (goingBeyondMaxLeftTranslation) {
+            float distanceFromLeftLimit = MaxLeftTranslation - XTranslationFromStartingPosition;
+            translateAmount.x = distanceFromLeftLimit; //move up to MaxLeftTranslation
+        } else if (goingBeyondMaxRightTranslation) {
+            float distanceFromRightLimit = MaxRightTranslation - XTranslationFromStartingPosition;
+            translateAmount.x = distanceFromRightLimit; //move up to MaxRightTranslation
         }
-        //if moving more to the right than MaxRightTranslation
-        else if (XTranslationFromStartingPosition + translateAmount.x > MaxRightTranslation)
-        {
-            //move up to MaxRightTranslation
-            translateAmount.x = MaxRightTranslation - XTranslationFromStartingPosition;
-        }
-        if (ZTranslationFromStartingPosition + translateAmount.z < MaxBackwardTranslation)
-        {
+    }
+
+    private void KeepZTranslationInLimits() {
+        bool goingBeyondMaxBackwardTranslation = ZTranslationFromStartingPosition + translateAmount.z < MaxBackwardTranslation;
+        bool goingBeyondMaxForwardTranslation = ZTranslationFromStartingPosition + translateAmount.z > MaxForwardTranslation;
+        if (goingBeyondMaxBackwardTranslation) {
             translateAmount.z = MaxBackwardTranslation - ZTranslationFromStartingPosition;
-        }
-        else if (ZTranslationFromStartingPosition + translateAmount.z > MaxForwardTranslation)
-        {
+        } else if (goingBeyondMaxForwardTranslation) {
             translateAmount.z = MaxForwardTranslation - ZTranslationFromStartingPosition;
         }
     }
